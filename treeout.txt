@@ -1,0 +1,2840 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Titan: Distributed Graph Database
+[INFO] Titan-Core: Core Library for Titan
+[INFO] Titan-Test: Test Suite for Titan
+[INFO] Titan-ElasticSearch: Distributed Indexing Support
+[INFO] Titan-HBase: Parent Module
+[INFO] Titan-HBase: Version-independent Core
+[INFO] Titan-HBase: 1.1.1 Compatibility Shim
+[INFO] Titan-HBase: Universal binary
+[INFO] Titan-Hadoop: Parent Module
+[INFO] Titan-Hadoop: Version-independent Core
+[INFO] Titan-Hadoop: 2.x Compatibility Shim
+[INFO] Titan-Hadoop: Universal binary
+[INFO] Titan-Lucene: Indexing Support
+[INFO] Titan-Rexster: Support for Titan in Rexster
+[INFO] Titan-Solr: Distributed Indexing Support
+[INFO] Titan-All: Complete Titan Distribution
+[INFO] Titan-Dist: Tar and Zip Archives
+[INFO] Titan-Dist: Archive with Hadoop 2
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan: Distributed Graph Database 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan ---
+[INFO] com.thinkaurelius.titan:titan:pom:0.5.4
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Core: Core Library for Titan 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-core ---
+[INFO] com.thinkaurelius.titan:titan-core:jar:0.5.4
+[INFO] +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  \- jline:jline:jar:1.0:compile
+[INFO] +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] +- commons-io:commons-io:jar:2.1:compile
+[INFO] +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] +- com.google.guava:guava:jar:15.0:compile
+[INFO] +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.4:compile
+[INFO] +- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Test: Test Suite for Titan 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-test ---
+[INFO] com.thinkaurelius.titan:titan-test:jar:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  \- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:compile
+[INFO] +- org.apache.commons:commons-math:jar:2.2:compile
+[INFO] +- com.carrotsearch:junit-benchmarks:jar:0.7.0:compile
+[INFO] +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:compile
+[INFO] +- com.h2database:h2:jar:1.3.172:test
+[INFO] +- junit:junit:jar:4.11:compile
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] +- org.mockito:mockito-all:jar:1.8.1:compile
+[INFO] +- org.easymock:easymock:jar:3.1:compile
+[INFO] |  +- cglib:cglib-nodep:jar:2.2.2:compile
+[INFO] |  \- org.objenesis:objenesis:jar:1.2:compile
+[INFO] +- org.codehaus.gmaven.runtime:gmaven-runtime-1.5:jar:1.5:test
+[INFO] |  +- org.codehaus.gmaven.feature:gmaven-feature-support:jar:1.5:test
+[INFO] |  |  \- org.codehaus.gmaven.feature:gmaven-feature-api:jar:1.5:test
+[INFO] |  +- org.codehaus.gmaven.runtime:gmaven-runtime-support:jar:1.5:test
+[INFO] |  |  +- org.codehaus.gmaven.runtime:gmaven-runtime-api:jar:1.5:test
+[INFO] |  |  +- org.sonatype.gshell:gshell-io:jar:2.4:test
+[INFO] |  |  +- org.codehaus.plexus:plexus-utils:jar:3.0:test
+[INFO] |  |  \- com.thoughtworks.qdox:qdox:jar:1.12:test
+[INFO] |  +- org.codehaus.groovy:groovy-all-minimal:jar:1.5.8:test
+[INFO] |  \- jline:jline:jar:1.0:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-ElasticSearch: Distributed Indexing Support 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-es ---
+[INFO] com.thinkaurelius.titan:titan-es:jar:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:test
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:test
+[INFO] |  +- junit:junit:jar:4.11:test
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-berkeleyje:jar:0.5.4:test
+[INFO] |  \- com.sleepycat:je:jar:5.0.73:test
+[INFO] +- com.thinkaurelius.titan:titan-berkeleyje:jar:tests:0.5.4:test
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:tests:0.5.4:test
+[INFO] |  +- org.apache.cassandra:cassandra-all:jar:2.0.8:test
+[INFO] |  |  +- net.jpountz.lz4:lz4:jar:1.2.0:test
+[INFO] |  |  +- com.ning:compress-lzf:jar:0.8.4:test
+[INFO] |  |  +- commons-cli:commons-cli:jar:1.2:test
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.1:test
+[INFO] |  |  +- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3:test
+[INFO] |  |  +- org.antlr:antlr:jar:3.2:test
+[INFO] |  |  |  \- org.antlr:antlr-runtime:jar:3.2:test
+[INFO] |  |  |     \- org.antlr:stringtemplate:jar:3.2:test
+[INFO] |  |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:test
+[INFO] |  |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:test
+[INFO] |  |  +- com.googlecode.json-simple:json-simple:jar:1.1:test
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.11:test
+[INFO] |  |  +- edu.stanford.ppl:snaptree:jar:0.1:test
+[INFO] |  |  +- org.mindrot:jbcrypt:jar:0.3m:test
+[INFO] |  |  +- com.yammer.metrics:metrics-core:jar:2.1.2:test
+[INFO] |  |  +- com.addthis.metrics:reporter-config:jar:2.1.0:test
+[INFO] |  |  |  \- org.hibernate:hibernate-validator:jar:4.3.0.Final:test
+[INFO] |  |  |     +- javax.validation:validation-api:jar:1.0.0.GA:test
+[INFO] |  |  |     \- org.jboss.logging:jboss-logging:jar:3.1.2.GA:test
+[INFO] |  |  +- com.thinkaurelius.thrift:thrift-server:jar:0.3.3:test
+[INFO] |  |  |  \- com.lmax:disruptor:jar:3.0.1:test
+[INFO] |  |  +- net.sf.supercsv:super-csv:jar:2.1.0:test
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:test
+[INFO] |  |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:test
+[INFO] |  |  |  \- org.apache.httpcomponents:httpcore:jar:4.2.5:test
+[INFO] |  |  +- org.apache.cassandra:cassandra-thrift:jar:2.0.8:test
+[INFO] |  |  +- com.github.stephenc:jamm:jar:0.2.5:test
+[INFO] |  |  \- io.netty:netty:jar:3.6.6.Final:test
+[INFO] |  +- commons-pool:commons-pool:jar:1.6:test
+[INFO] |  +- org.jboss.netty:netty:jar:3.2.7.Final:test
+[INFO] |  +- com.netflix.astyanax:astyanax-core:jar:1.56.48:test
+[INFO] |  |  +- com.eaio.uuid:uuid:jar:3.2:test
+[INFO] |  |  \- joda-time:joda-time:jar:1.6.2:test
+[INFO] |  +- com.netflix.astyanax:astyanax-thrift:jar:1.56.48:test
+[INFO] |  +- com.netflix.astyanax:astyanax-cassandra:jar:1.56.48:test
+[INFO] |  |  \- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-csv:jar:1.0-r706900_3:test
+[INFO] |  +- com.netflix.astyanax:astyanax-recipes:jar:1.56.48:test
+[INFO] |  \- org.xerial.snappy:snappy-java:jar:1.0.5-M3:test
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:0.5.4:test
+[INFO] +- org.elasticsearch:elasticsearch:jar:1.2.1:compile
+[INFO] |  +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-codecs:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-memory:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-highlighter:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-sandbox:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-suggest:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-misc:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-join:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-grouping:jar:4.8.1:compile
+[INFO] |  \- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-HBase: Parent Module 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-hbase-parent ---
+[INFO] com.thinkaurelius.titan:titan-hbase-parent:pom:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:test
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:test
+[INFO] |  +- junit:junit:jar:4.11:test
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:0.5.4:test
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:test
+[INFO] |     +- org.apache.lucene:lucene-core:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-queryparser:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-grouping:jar:4.8.1:test
+[INFO] |     \- org.apache.lucene:lucene-spatial:jar:4.8.1:test
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:compile
+[INFO] +- log4j:log4j:jar:1.2.16:compile
+[INFO] \- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-HBase: Version-independent Core 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-hbase-core ---
+[INFO] com.thinkaurelius.titan:titan-hbase-core:jar:0.5.4
+[INFO] +- org.apache.hbase:hbase-client:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-annotations:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-common:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-protocol:jar:1.1.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  +- io.netty:netty-all:jar:4.0.23.Final:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper:jar:3.4.6:compile
+[INFO] |  +- org.apache.htrace:htrace-core:jar:3.1.0-incubating:compile
+[INFO] |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] |  +- org.jruby.jcodings:jcodings:jar:1.0.8:compile
+[INFO] |  +- org.jruby.joni:joni:jar:2.1.2:compile
+[INFO] |  +- org.apache.hadoop:hadoop-auth:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  |  |  \- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  |  \- org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.api:api-asn1-api:jar:1.0.0-M20:compile
+[INFO] |  |     \- org.apache.directory.api:api-util:jar:1.0.0-M20:compile
+[INFO] |  +- org.apache.hadoop:hadoop-common:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.1.1:compile
+[INFO] |  |  +- commons-net:commons-net:jar:1.4.1:compile
+[INFO] |  |  |  \- oro:oro:jar:2.0.8:compile
+[INFO] |  |  +- commons-el:commons-el:jar:1.0:compile
+[INFO] |  |  +- com.jcraft:jsch:jar:0.1.42:compile
+[INFO] |  |  \- org.apache.commons:commons-compress:jar:1.4.1:compile
+[INFO] |  |     \- org.tukaani:xz:jar:1.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-yarn-common:jar:2.5.1:compile
+[INFO] |  |     \- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |        +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |        \- javax.activation:activation:jar:1.1:compile
+[INFO] |  +- com.github.stephenc.findbugs:findbugs-annotations:jar:1.3.9-1:compile
+[INFO] |  \- junit:junit:jar:4.11:compile
+[INFO] |     \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] +- org.apache.hbase:hbase-server:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-procedure:jar:1.1.1:compile
+[INFO] |  |  \- org.apache.hbase:hbase-common:jar:tests:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-prefix-tree:jar:1.1.1:runtime
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- org.apache.hbase:hbase-hadoop-compat:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-hadoop2-compat:jar:1.1.1:compile
+[INFO] |  +- com.yammer.metrics:metrics-core:jar:2.1.2:compile
+[INFO] |  +- com.sun.jersey:jersey-core:jar:1.18.2:compile
+[INFO] |  +- com.sun.jersey:jersey-server:jar:1.18.2:compile
+[INFO] |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:compile
+[INFO] |  +- org.mortbay.jetty:jetty:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jetty-sslengine:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jsp-2.1:jar:6.1.14:compile
+[INFO] |  +- org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:compile
+[INFO] |  +- org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:compile
+[INFO] |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-jaxrs:jar:1.9.2:compile
+[INFO] |  +- tomcat:jasper-compiler:jar:5.5.23:compile
+[INFO] |  +- tomcat:jasper-runtime:jar:5.5.23:compile
+[INFO] |  +- org.jamon:jamon-runtime:jar:2.3.1:compile
+[INFO] |  \- com.lmax:disruptor:jar:3.3.0:compile
+[INFO] +- org.jruby:jruby-complete:jar:1.6.8:test
+[INFO] +- org.apache.hadoop:hadoop-annotations:jar:2.5.1:compile
+[INFO] |  \- jdk.tools:jdk.tools:jar:1.7:system
+[INFO] +- org.apache.hadoop:hadoop-hdfs:jar:2.5.1:compile
+[INFO] |  +- commons-daemon:commons-daemon:jar:1.0.13:compile
+[INFO] |  +- javax.servlet.jsp:jsp-api:jar:2.1:compile
+[INFO] |  +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  \- io.netty:netty:jar:3.6.6.Final:compile
+[INFO] +- org.apache.hadoop:hadoop-client:jar:2.5.1:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.hadoop:hadoop-yarn-client:jar:2.5.1:compile
+[INFO] |  |  |  |  \- com.sun.jersey:jersey-client:jar:1.9:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-yarn-server-common:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.5.1:compile
+[INFO] |  |     \- org.fusesource.leveldbjni:leveldbjni-all:jar:1.8:compile
+[INFO] |  +- org.apache.hadoop:hadoop-yarn-api:jar:2.5.1:compile
+[INFO] |  \- org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.5.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  |  \- colt:colt:jar:1.2.0:compile
+[INFO] |  |     \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:test
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:0.5.4:test
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:test
+[INFO] |     +- org.apache.lucene:lucene-core:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-queryparser:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-grouping:jar:4.8.1:test
+[INFO] |     \- org.apache.lucene:lucene-spatial:jar:4.8.1:test
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:compile
+[INFO] +- log4j:log4j:jar:1.2.16:compile
+[INFO] \- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-HBase: 1.1.1 Compatibility Shim 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-hbase-111 ---
+[INFO] com.thinkaurelius.titan:titan-hbase-111:jar:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-hbase-core:jar:0.5.4:compile
+[INFO] +- org.apache.hbase:hbase-client:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-annotations:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-common:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-protocol:jar:1.1.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  +- io.netty:netty-all:jar:4.0.23.Final:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper:jar:3.4.6:compile
+[INFO] |  +- org.apache.htrace:htrace-core:jar:3.1.0-incubating:compile
+[INFO] |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] |  +- org.jruby.jcodings:jcodings:jar:1.0.8:compile
+[INFO] |  +- org.jruby.joni:joni:jar:2.1.2:compile
+[INFO] |  +- org.apache.hadoop:hadoop-auth:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  |  |  \- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  |  \- org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.api:api-asn1-api:jar:1.0.0-M20:compile
+[INFO] |  |     \- org.apache.directory.api:api-util:jar:1.0.0-M20:compile
+[INFO] |  +- org.apache.hadoop:hadoop-common:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.1.1:compile
+[INFO] |  |  +- commons-net:commons-net:jar:1.4.1:compile
+[INFO] |  |  |  \- oro:oro:jar:2.0.8:compile
+[INFO] |  |  +- commons-el:commons-el:jar:1.0:compile
+[INFO] |  |  +- com.jcraft:jsch:jar:0.1.42:compile
+[INFO] |  |  \- org.apache.commons:commons-compress:jar:1.4.1:compile
+[INFO] |  |     \- org.tukaani:xz:jar:1.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-yarn-common:jar:2.5.1:compile
+[INFO] |  |     \- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |        +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |        \- javax.activation:activation:jar:1.1:compile
+[INFO] |  +- com.github.stephenc.findbugs:findbugs-annotations:jar:1.3.9-1:compile
+[INFO] |  \- junit:junit:jar:4.11:compile
+[INFO] |     \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] +- org.apache.hbase:hbase-server:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-procedure:jar:1.1.1:compile
+[INFO] |  |  \- org.apache.hbase:hbase-common:jar:tests:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-prefix-tree:jar:1.1.1:runtime
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- org.apache.hbase:hbase-hadoop-compat:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-hadoop2-compat:jar:1.1.1:compile
+[INFO] |  +- com.yammer.metrics:metrics-core:jar:2.1.2:compile
+[INFO] |  +- com.sun.jersey:jersey-core:jar:1.18.2:compile
+[INFO] |  +- com.sun.jersey:jersey-server:jar:1.18.2:compile
+[INFO] |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:compile
+[INFO] |  +- org.mortbay.jetty:jetty:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jetty-sslengine:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jsp-2.1:jar:6.1.14:compile
+[INFO] |  +- org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:compile
+[INFO] |  +- org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:compile
+[INFO] |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-jaxrs:jar:1.9.2:compile
+[INFO] |  +- tomcat:jasper-compiler:jar:5.5.23:compile
+[INFO] |  +- tomcat:jasper-runtime:jar:5.5.23:compile
+[INFO] |  +- org.jamon:jamon-runtime:jar:2.3.1:compile
+[INFO] |  \- com.lmax:disruptor:jar:3.3.0:compile
+[INFO] +- org.jruby:jruby-complete:jar:1.6.8:test
+[INFO] +- org.apache.hadoop:hadoop-annotations:jar:2.5.1:compile
+[INFO] |  \- jdk.tools:jdk.tools:jar:1.7:system
+[INFO] +- org.apache.hadoop:hadoop-hdfs:jar:2.5.1:compile
+[INFO] |  +- commons-daemon:commons-daemon:jar:1.0.13:compile
+[INFO] |  +- javax.servlet.jsp:jsp-api:jar:2.1:compile
+[INFO] |  +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  \- io.netty:netty:jar:3.6.6.Final:compile
+[INFO] +- org.apache.hadoop:hadoop-client:jar:2.5.1:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.hadoop:hadoop-yarn-client:jar:2.5.1:compile
+[INFO] |  |  |  |  \- com.sun.jersey:jersey-client:jar:1.9:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-yarn-server-common:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.5.1:compile
+[INFO] |  |     \- org.fusesource.leveldbjni:leveldbjni-all:jar:1.8:compile
+[INFO] |  +- org.apache.hadoop:hadoop-yarn-api:jar:2.5.1:compile
+[INFO] |  \- org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.5.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  |  \- colt:colt:jar:1.2.0:compile
+[INFO] |  |     \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:test
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:0.5.4:test
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:test
+[INFO] |     +- org.apache.lucene:lucene-core:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-queryparser:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-grouping:jar:4.8.1:test
+[INFO] |     \- org.apache.lucene:lucene-spatial:jar:4.8.1:test
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:compile
+[INFO] +- log4j:log4j:jar:1.2.16:compile
+[INFO] \- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-HBase: Universal binary 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-hbase ---
+[INFO] com.thinkaurelius.titan:titan-hbase:jar:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-hbase-core:jar:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-hbase-111:jar:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:test
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:test
+[INFO] |  +- junit:junit:jar:4.11:test
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:0.5.4:test
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:test
+[INFO] |     +- org.apache.lucene:lucene-core:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-queryparser:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:test
+[INFO] |     +- org.apache.lucene:lucene-grouping:jar:4.8.1:test
+[INFO] |     \- org.apache.lucene:lucene-spatial:jar:4.8.1:test
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:compile
+[INFO] +- log4j:log4j:jar:1.2.16:compile
+[INFO] \- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Hadoop: Parent Module 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-hadoop-parent ---
+[INFO] com.thinkaurelius.titan:titan-hadoop-parent:pom:0.5.4
+[INFO] +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- com.tinkerpop.blueprints:blueprints-sail-graph:jar:2.5.0:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-query:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryalgebra-model:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-queryparser-sparql:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryparser-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-memory:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-inferencer:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryparser-serql:jar:2.7.10:runtime
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryalgebra-evaluation:jar:2.7.10:compile
+[INFO] |  |     +- org.openrdf.sesame:sesame-repository-sparql:jar:2.7.10:compile
+[INFO] |  |     |  \- org.openrdf.sesame:sesame-queryresultio-sparqlxml:jar:2.7.10:compile
+[INFO] |  |     \- org.openrdf.sesame:sesame-http-client:jar:2.7.10:compile
+[INFO] |  |        +- org.openrdf.sesame:sesame-http-protocol:jar:2.7.10:compile
+[INFO] |  |        +- org.openrdf.sesame:sesame-queryresultio-api:jar:2.7.10:compile
+[INFO] |  |        \- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-nativerdf:jar:2.7.10:compile
+[INFO] |  +- net.fortytwo:linked-data-sail:jar:1.1:compile
+[INFO] |  |  +- net.fortytwo.ripple:ripple-flow-rdf:jar:1.1:compile
+[INFO] |  |  |  \- net.fortytwo.ripple:ripple-flow:jar:1.1:compile
+[INFO] |  |  |     \- net.fortytwo.ripple:ripple-base:jar:1.1:compile
+[INFO] |  |  |        \- org.restlet.jse:org.restlet:jar:2.1.1:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-binary:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-nquads:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-rdfjson:jar:2.7.10:compile
+[INFO] |  |  +- org.semarglproject:semargl-sesame:jar:0.4:compile
+[INFO] |  |  |  +- org.semarglproject:semargl-core:jar:0.4:compile
+[INFO] |  |  |  \- org.semarglproject:semargl-rdfa:jar:0.4:compile
+[INFO] |  |  |     \- org.semarglproject:semargl-rdf:jar:0.4:compile
+[INFO] |  |  \- com.github.jsonld-java:jsonld-java-sesame:jar:0.3:compile
+[INFO] |  |     \- com.github.jsonld-java:jsonld-java:jar:0.3:compile
+[INFO] |  |        \- org.apache.httpcomponents:httpclient-cache:jar:4.2.5:compile
+[INFO] |  \- net.fortytwo.sesametools:repository-sail:jar:1.8:compile
+[INFO] |     +- net.fortytwo.sesametools:common:jar:1.8:compile
+[INFO] |     \- org.openrdf.sesame:sesame-repository-api:jar:2.7.10:compile
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:0.5.4:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:test
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:test
+[INFO] |  +- org.apache.cassandra:cassandra-all:jar:2.0.8:test
+[INFO] |  |  +- net.jpountz.lz4:lz4:jar:1.2.0:test
+[INFO] |  |  +- com.ning:compress-lzf:jar:0.8.4:test
+[INFO] |  |  +- commons-cli:commons-cli:jar:1.2:test
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.1:test
+[INFO] |  |  +- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3:test
+[INFO] |  |  +- org.antlr:antlr:jar:3.2:test
+[INFO] |  |  |  \- org.antlr:antlr-runtime:jar:3.2:test
+[INFO] |  |  |     \- org.antlr:stringtemplate:jar:3.2:test
+[INFO] |  |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:test
+[INFO] |  |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:test
+[INFO] |  |  +- com.googlecode.json-simple:json-simple:jar:1.1:test
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.11:test
+[INFO] |  |  +- edu.stanford.ppl:snaptree:jar:0.1:test
+[INFO] |  |  +- org.mindrot:jbcrypt:jar:0.3m:test
+[INFO] |  |  +- com.yammer.metrics:metrics-core:jar:2.1.2:test
+[INFO] |  |  +- com.addthis.metrics:reporter-config:jar:2.1.0:test
+[INFO] |  |  |  \- org.hibernate:hibernate-validator:jar:4.3.0.Final:test
+[INFO] |  |  |     +- javax.validation:validation-api:jar:1.0.0.GA:test
+[INFO] |  |  |     \- org.jboss.logging:jboss-logging:jar:3.1.2.GA:test
+[INFO] |  |  +- com.thinkaurelius.thrift:thrift-server:jar:0.3.3:test
+[INFO] |  |  |  \- com.lmax:disruptor:jar:3.0.1:test
+[INFO] |  |  +- net.sf.supercsv:super-csv:jar:2.1.0:test
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:test
+[INFO] |  |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  |  |  \- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  |  +- org.apache.cassandra:cassandra-thrift:jar:2.0.8:test
+[INFO] |  |  +- com.github.stephenc:jamm:jar:0.2.5:test
+[INFO] |  |  \- io.netty:netty:jar:3.6.6.Final:test
+[INFO] |  +- commons-pool:commons-pool:jar:1.6:test
+[INFO] |  +- org.jboss.netty:netty:jar:3.2.7.Final:test
+[INFO] |  +- com.netflix.astyanax:astyanax-core:jar:1.56.48:test
+[INFO] |  |  +- com.eaio.uuid:uuid:jar:3.2:test
+[INFO] |  |  \- joda-time:joda-time:jar:1.6.2:test
+[INFO] |  +- com.netflix.astyanax:astyanax-thrift:jar:1.56.48:test
+[INFO] |  +- com.netflix.astyanax:astyanax-cassandra:jar:1.56.48:test
+[INFO] |  |  \- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-csv:jar:1.0-r706900_3:test
+[INFO] |  +- com.netflix.astyanax:astyanax-recipes:jar:1.56.48:test
+[INFO] |  \- org.xerial.snappy:snappy-java:jar:1.0.5-M3:test
+[INFO] +- com.thinkaurelius.titan:titan-hbase:jar:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:0.5.4:compile
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:compile
+[INFO] |     +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-grouping:jar:4.8.1:compile
+[INFO] |     \- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-hbase-core:jar:tests:0.5.4:test
+[INFO] +- org.elasticsearch:elasticsearch-hadoop-mr:jar:2.0.0:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-n3:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-model:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-datatypes:jar:2.7.10:runtime
+[INFO] |  \- org.openrdf.sesame:sesame-rio-languages:jar:2.7.10:runtime
+[INFO] +- org.openrdf.sesame:sesame-rio-ntriples:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-rdfxml:jar:2.7.10:compile
+[INFO] |  \- org.openrdf.sesame:sesame-util:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-trig:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-trix:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-turtle:jar:2.7.10:compile
+[INFO] +- log4j:log4j:jar:1.2.16:compile
+[INFO] +- junit:junit:jar:4.11:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] \- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Hadoop: Version-independent Core 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-hadoop-core ---
+[INFO] com.thinkaurelius.titan:titan-hadoop-core:jar:0.5.4
+[INFO] +- org.apache.hadoop:hadoop-client:jar:2.5.1:compile
+[INFO] |  +- org.apache.hadoop:hadoop-common:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.1.1:compile
+[INFO] |  |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  |  +- commons-net:commons-net:jar:1.4.1:compile
+[INFO] |  |  |  \- oro:oro:jar:2.0.8:compile
+[INFO] |  |  +- org.apache.avro:avro:jar:1.7.4:compile
+[INFO] |  |  |  \- com.thoughtworks.paranamer:paranamer:jar:2.3:compile
+[INFO] |  |  \- org.apache.commons:commons-compress:jar:1.4.1:compile
+[INFO] |  |     \- org.tukaani:xz:jar:1.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-hdfs:jar:2.5.1:compile
+[INFO] |  |  \- io.netty:netty:jar:3.6.6.Final:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.hadoop:hadoop-yarn-client:jar:2.5.1:compile
+[INFO] |  |  |  |  \- com.sun.jersey:jersey-client:jar:1.9:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-yarn-server-common:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.5.1:compile
+[INFO] |  |     \- org.fusesource.leveldbjni:leveldbjni-all:jar:1.8:compile
+[INFO] |  +- org.apache.hadoop:hadoop-yarn-api:jar:2.5.1:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-yarn-common:jar:2.5.1:compile
+[INFO] |  |     +- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |     |  +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |     |  \- javax.activation:activation:jar:1.1:compile
+[INFO] |  |     +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |  |     \- org.codehaus.jackson:jackson-xc:jar:1.9.2:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.5.1:compile
+[INFO] |  \- org.apache.hadoop:hadoop-annotations:jar:2.5.1:compile
+[INFO] +- org.apache.mrunit:mrunit:jar:hadoop2:1.1.0:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- org.mockito:mockito-core:jar:1.9.5:compile
+[INFO] |  |  \- org.objenesis:objenesis:jar:1.2:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- org.powermock:powermock-core:jar:1.5.1:compile
+[INFO] |  |  +- org.powermock:powermock-reflect:jar:1.5.1:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.powermock:powermock-api-mockito:jar:1.5.1:compile
+[INFO] |  |  \- org.powermock:powermock-api-support:jar:1.5.1:compile
+[INFO] |  \- org.powermock:powermock-module-junit4:jar:1.5.1:compile
+[INFO] |     \- org.powermock:powermock-module-junit4-common:jar:1.5.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:0.5.4:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:compile
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:compile
+[INFO] |  +- org.apache.cassandra:cassandra-all:jar:2.0.8:compile
+[INFO] |  |  +- net.jpountz.lz4:lz4:jar:1.2.0:compile
+[INFO] |  |  +- com.ning:compress-lzf:jar:0.8.4:compile
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] |  |  +- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3:compile
+[INFO] |  |  +- org.antlr:antlr:jar:3.2:compile
+[INFO] |  |  |  \- org.antlr:antlr-runtime:jar:3.2:compile
+[INFO] |  |  |     \- org.antlr:stringtemplate:jar:3.2:compile
+[INFO] |  |  +- jline:jline:jar:1.0:compile
+[INFO] |  |  +- com.googlecode.json-simple:json-simple:jar:1.1:compile
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.11:compile
+[INFO] |  |  +- edu.stanford.ppl:snaptree:jar:0.1:compile
+[INFO] |  |  +- org.mindrot:jbcrypt:jar:0.3m:compile
+[INFO] |  |  +- com.addthis.metrics:reporter-config:jar:2.1.0:compile
+[INFO] |  |  |  \- org.hibernate:hibernate-validator:jar:4.3.0.Final:compile
+[INFO] |  |  |     +- javax.validation:validation-api:jar:1.0.0.GA:compile
+[INFO] |  |  |     \- org.jboss.logging:jboss-logging:jar:3.1.2.GA:compile
+[INFO] |  |  +- com.thinkaurelius.thrift:thrift-server:jar:0.3.3:compile
+[INFO] |  |  +- net.sf.supercsv:super-csv:jar:2.1.0:compile
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:compile
+[INFO] |  |  |  \- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  |  +- org.apache.cassandra:cassandra-thrift:jar:2.0.8:compile
+[INFO] |  |  \- com.github.stephenc:jamm:jar:0.2.5:compile
+[INFO] |  +- commons-pool:commons-pool:jar:1.6:compile
+[INFO] |  +- org.jboss.netty:netty:jar:3.2.7.Final:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-core:jar:1.56.48:compile
+[INFO] |  |  +- com.eaio.uuid:uuid:jar:3.2:compile
+[INFO] |  |  \- joda-time:joda-time:jar:1.6.2:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-thrift:jar:1.56.48:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-cassandra:jar:1.56.48:compile
+[INFO] |  |  \- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-csv:jar:1.0-r706900_3:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-recipes:jar:1.56.48:compile
+[INFO] |  \- org.xerial.snappy:snappy-java:jar:1.0.5-M3:compile
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:tests:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:tests:0.5.4:test
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:compile
+[INFO] |     +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-grouping:jar:4.8.1:compile
+[INFO] |     \- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] +- org.apache.hbase:hbase-server:jar:1.1.1:provided
+[INFO] |  +- org.apache.hbase:hbase-common:jar:1.1.1:provided
+[INFO] |  +- org.apache.hbase:hbase-protocol:jar:1.1.1:provided
+[INFO] |  +- org.apache.hbase:hbase-procedure:jar:1.1.1:provided
+[INFO] |  |  \- org.apache.hbase:hbase-common:jar:tests:1.1.1:provided
+[INFO] |  +- org.apache.hbase:hbase-prefix-tree:jar:1.1.1:provided
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- org.apache.hbase:hbase-hadoop-compat:jar:1.1.1:provided
+[INFO] |  +- org.apache.hbase:hbase-hadoop2-compat:jar:1.1.1:provided
+[INFO] |  +- com.yammer.metrics:metrics-core:jar:2.1.2:compile
+[INFO] |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  +- com.sun.jersey:jersey-core:jar:1.18.2:compile
+[INFO] |  +- com.sun.jersey:jersey-server:jar:1.18.2:provided
+[INFO] |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:provided
+[INFO] |  +- org.apache.zookeeper:zookeeper:jar:3.4.6:compile
+[INFO] |  +- org.mortbay.jetty:jetty:jar:6.1.26:provided
+[INFO] |  +- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jetty-sslengine:jar:6.1.26:provided
+[INFO] |  +- org.mortbay.jetty:jsp-2.1:jar:6.1.14:provided
+[INFO] |  +- org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:provided
+[INFO] |  +- org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:provided
+[INFO] |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-jaxrs:jar:1.9.2:compile
+[INFO] |  +- tomcat:jasper-compiler:jar:5.5.23:provided
+[INFO] |  +- tomcat:jasper-runtime:jar:5.5.23:provided
+[INFO] |  |  \- commons-el:commons-el:jar:1.0:provided
+[INFO] |  +- org.jamon:jamon-runtime:jar:2.3.1:provided
+[INFO] |  +- io.netty:netty-all:jar:4.0.23.Final:provided
+[INFO] |  +- org.apache.htrace:htrace-core:jar:3.1.0-incubating:provided
+[INFO] |  +- com.lmax:disruptor:jar:3.3.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-auth:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  |  \- org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.api:api-asn1-api:jar:1.0.0-M20:compile
+[INFO] |  |     \- org.apache.directory.api:api-util:jar:1.0.0-M20:compile
+[INFO] |  \- com.github.stephenc.findbugs:findbugs-annotations:jar:1.3.9-1:provided
+[INFO] +- org.apache.hbase:hbase-client:jar:1.1.1:provided
+[INFO] |  +- org.apache.hbase:hbase-annotations:jar:1.1.1:provided
+[INFO] |  |  \- jdk.tools:jdk.tools:jar:1.7:system
+[INFO] |  +- org.jruby.jcodings:jcodings:jar:1.0.8:provided
+[INFO] |  \- org.jruby.joni:joni:jar:2.1.2:provided
+[INFO] +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  \- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |     +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |     |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |     \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] +- com.tinkerpop.blueprints:blueprints-sail-graph:jar:2.5.0:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-query:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryalgebra-model:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-queryparser-sparql:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryparser-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-memory:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-inferencer:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryparser-serql:jar:2.7.10:runtime
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryalgebra-evaluation:jar:2.7.10:compile
+[INFO] |  |     +- org.openrdf.sesame:sesame-repository-sparql:jar:2.7.10:compile
+[INFO] |  |     |  \- org.openrdf.sesame:sesame-queryresultio-sparqlxml:jar:2.7.10:compile
+[INFO] |  |     \- org.openrdf.sesame:sesame-http-client:jar:2.7.10:compile
+[INFO] |  |        +- org.openrdf.sesame:sesame-http-protocol:jar:2.7.10:compile
+[INFO] |  |        \- org.openrdf.sesame:sesame-queryresultio-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-nativerdf:jar:2.7.10:compile
+[INFO] |  +- net.fortytwo:linked-data-sail:jar:1.1:compile
+[INFO] |  |  +- net.fortytwo.ripple:ripple-flow-rdf:jar:1.1:compile
+[INFO] |  |  |  \- net.fortytwo.ripple:ripple-flow:jar:1.1:compile
+[INFO] |  |  |     \- net.fortytwo.ripple:ripple-base:jar:1.1:compile
+[INFO] |  |  |        \- org.restlet.jse:org.restlet:jar:2.1.1:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-binary:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-nquads:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-rdfjson:jar:2.7.10:compile
+[INFO] |  |  +- org.semarglproject:semargl-sesame:jar:0.4:compile
+[INFO] |  |  |  +- org.semarglproject:semargl-core:jar:0.4:compile
+[INFO] |  |  |  \- org.semarglproject:semargl-rdfa:jar:0.4:compile
+[INFO] |  |  |     \- org.semarglproject:semargl-rdf:jar:0.4:compile
+[INFO] |  |  \- com.github.jsonld-java:jsonld-java-sesame:jar:0.3:compile
+[INFO] |  |     \- com.github.jsonld-java:jsonld-java:jar:0.3:compile
+[INFO] |  |        \- org.apache.httpcomponents:httpclient-cache:jar:4.2.5:compile
+[INFO] |  \- net.fortytwo.sesametools:repository-sail:jar:1.8:compile
+[INFO] |     +- net.fortytwo.sesametools:common:jar:1.8:compile
+[INFO] |     \- org.openrdf.sesame:sesame-repository-api:jar:2.7.10:compile
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  \- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-hbase:jar:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     \- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] +- com.thinkaurelius.titan:titan-hbase-core:jar:tests:0.5.4:test
+[INFO] +- org.elasticsearch:elasticsearch-hadoop-mr:jar:2.0.0:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-n3:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-model:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-datatypes:jar:2.7.10:runtime
+[INFO] |  \- org.openrdf.sesame:sesame-rio-languages:jar:2.7.10:runtime
+[INFO] +- org.openrdf.sesame:sesame-rio-ntriples:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-rdfxml:jar:2.7.10:compile
+[INFO] |  \- org.openrdf.sesame:sesame-util:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-trig:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-trix:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-turtle:jar:2.7.10:compile
+[INFO] +- log4j:log4j:jar:1.2.16:compile
+[INFO] +- junit:junit:jar:4.11:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] \- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Hadoop: 2.x Compatibility Shim 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-hadoop-2 ---
+[INFO] com.thinkaurelius.titan:titan-hadoop-2:jar:0.5.4
+[INFO] +- org.apache.hadoop:hadoop-client:jar:2.5.1:compile
+[INFO] |  +- org.apache.hadoop:hadoop-common:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.1.1:compile
+[INFO] |  |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  |  +- commons-net:commons-net:jar:1.4.1:compile
+[INFO] |  |  |  \- oro:oro:jar:2.0.8:compile
+[INFO] |  |  +- org.apache.avro:avro:jar:1.7.4:compile
+[INFO] |  |  |  \- com.thoughtworks.paranamer:paranamer:jar:2.3:compile
+[INFO] |  |  \- org.apache.commons:commons-compress:jar:1.4.1:compile
+[INFO] |  |     \- org.tukaani:xz:jar:1.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-hdfs:jar:2.5.1:compile
+[INFO] |  |  \- io.netty:netty:jar:3.6.6.Final:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.hadoop:hadoop-yarn-client:jar:2.5.1:compile
+[INFO] |  |  |  |  \- com.sun.jersey:jersey-client:jar:1.9:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-yarn-server-common:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.5.1:compile
+[INFO] |  |     \- org.fusesource.leveldbjni:leveldbjni-all:jar:1.8:compile
+[INFO] |  +- org.apache.hadoop:hadoop-yarn-api:jar:2.5.1:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-yarn-common:jar:2.5.1:compile
+[INFO] |  |     +- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |     |  +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |     |  \- javax.activation:activation:jar:1.1:compile
+[INFO] |  |     +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |  |     \- org.codehaus.jackson:jackson-xc:jar:1.9.2:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.5.1:compile
+[INFO] |  \- org.apache.hadoop:hadoop-annotations:jar:2.5.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-hadoop-core:jar:0.5.4:compile
+[INFO] |  \- com.thinkaurelius.titan:titan-cassandra:jar:tests:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-hadoop-core:jar:tests:0.5.4:test
+[INFO] +- com.thinkaurelius.titan:titan-hadoop-core:jar:shared-resources:0.5.4:test
+[INFO] +- org.apache.mrunit:mrunit:jar:hadoop2:1.1.0:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- org.mockito:mockito-core:jar:1.9.5:compile
+[INFO] |  |  \- org.objenesis:objenesis:jar:1.2:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- org.powermock:powermock-core:jar:1.5.1:compile
+[INFO] |  |  +- org.powermock:powermock-reflect:jar:1.5.1:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.powermock:powermock-api-mockito:jar:1.5.1:compile
+[INFO] |  |  \- org.powermock:powermock-api-support:jar:1.5.1:compile
+[INFO] |  \- org.powermock:powermock-module-junit4:jar:1.5.1:compile
+[INFO] |     \- org.powermock:powermock-module-junit4-common:jar:1.5.1:compile
+[INFO] +- org.apache.hbase:hbase-server:jar:1.1.1:test
+[INFO] |  +- org.apache.hbase:hbase-common:jar:1.1.1:test
+[INFO] |  +- org.apache.hbase:hbase-protocol:jar:1.1.1:test
+[INFO] |  +- org.apache.hbase:hbase-procedure:jar:1.1.1:test
+[INFO] |  |  \- org.apache.hbase:hbase-common:jar:tests:1.1.1:test
+[INFO] |  +- org.apache.hbase:hbase-prefix-tree:jar:1.1.1:test
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- org.apache.hbase:hbase-hadoop-compat:jar:1.1.1:test
+[INFO] |  +- org.apache.hbase:hbase-hadoop2-compat:jar:1.1.1:test
+[INFO] |  +- com.yammer.metrics:metrics-core:jar:2.1.2:compile
+[INFO] |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  +- com.sun.jersey:jersey-core:jar:1.18.2:compile
+[INFO] |  +- com.sun.jersey:jersey-server:jar:1.18.2:test
+[INFO] |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:test
+[INFO] |  +- org.apache.zookeeper:zookeeper:jar:3.4.6:compile
+[INFO] |  +- org.mortbay.jetty:jetty:jar:6.1.26:test
+[INFO] |  +- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jetty-sslengine:jar:6.1.26:test
+[INFO] |  +- org.mortbay.jetty:jsp-2.1:jar:6.1.14:test
+[INFO] |  +- org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:test
+[INFO] |  +- org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:test
+[INFO] |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-jaxrs:jar:1.9.2:compile
+[INFO] |  +- tomcat:jasper-compiler:jar:5.5.23:test
+[INFO] |  +- tomcat:jasper-runtime:jar:5.5.23:test
+[INFO] |  |  \- commons-el:commons-el:jar:1.0:test
+[INFO] |  +- org.jamon:jamon-runtime:jar:2.3.1:test
+[INFO] |  +- io.netty:netty-all:jar:4.0.23.Final:test
+[INFO] |  +- org.apache.htrace:htrace-core:jar:3.1.0-incubating:test
+[INFO] |  +- com.lmax:disruptor:jar:3.3.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-auth:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  |  |  \- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  |  \- org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.api:api-asn1-api:jar:1.0.0-M20:compile
+[INFO] |  |     \- org.apache.directory.api:api-util:jar:1.0.0-M20:compile
+[INFO] |  \- com.github.stephenc.findbugs:findbugs-annotations:jar:1.3.9-1:test
+[INFO] +- org.apache.hbase:hbase-client:jar:1.1.1:test
+[INFO] |  +- org.apache.hbase:hbase-annotations:jar:1.1.1:test
+[INFO] |  |  \- jdk.tools:jdk.tools:jar:1.7:system
+[INFO] |  +- org.jruby.jcodings:jcodings:jar:1.0.8:test
+[INFO] |  \- org.jruby.joni:joni:jar:2.1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:tests:0.5.4:test
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:compile
+[INFO] |     +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-grouping:jar:4.8.1:compile
+[INFO] |     \- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  \- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |     +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |     |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |     \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] +- com.tinkerpop.blueprints:blueprints-sail-graph:jar:2.5.0:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-query:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryalgebra-model:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-queryparser-sparql:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryparser-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-memory:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-inferencer:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryparser-serql:jar:2.7.10:runtime
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryalgebra-evaluation:jar:2.7.10:compile
+[INFO] |  |     +- org.openrdf.sesame:sesame-repository-sparql:jar:2.7.10:compile
+[INFO] |  |     |  \- org.openrdf.sesame:sesame-queryresultio-sparqlxml:jar:2.7.10:compile
+[INFO] |  |     \- org.openrdf.sesame:sesame-http-client:jar:2.7.10:compile
+[INFO] |  |        +- org.openrdf.sesame:sesame-http-protocol:jar:2.7.10:compile
+[INFO] |  |        \- org.openrdf.sesame:sesame-queryresultio-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-nativerdf:jar:2.7.10:compile
+[INFO] |  +- net.fortytwo:linked-data-sail:jar:1.1:compile
+[INFO] |  |  +- net.fortytwo.ripple:ripple-flow-rdf:jar:1.1:compile
+[INFO] |  |  |  \- net.fortytwo.ripple:ripple-flow:jar:1.1:compile
+[INFO] |  |  |     \- net.fortytwo.ripple:ripple-base:jar:1.1:compile
+[INFO] |  |  |        \- org.restlet.jse:org.restlet:jar:2.1.1:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-binary:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-nquads:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-rdfjson:jar:2.7.10:compile
+[INFO] |  |  +- org.semarglproject:semargl-sesame:jar:0.4:compile
+[INFO] |  |  |  +- org.semarglproject:semargl-core:jar:0.4:compile
+[INFO] |  |  |  \- org.semarglproject:semargl-rdfa:jar:0.4:compile
+[INFO] |  |  |     \- org.semarglproject:semargl-rdf:jar:0.4:compile
+[INFO] |  |  \- com.github.jsonld-java:jsonld-java-sesame:jar:0.3:compile
+[INFO] |  |     \- com.github.jsonld-java:jsonld-java:jar:0.3:compile
+[INFO] |  |        \- org.apache.httpcomponents:httpclient-cache:jar:4.2.5:compile
+[INFO] |  \- net.fortytwo.sesametools:repository-sail:jar:1.8:compile
+[INFO] |     +- net.fortytwo.sesametools:common:jar:1.8:compile
+[INFO] |     \- org.openrdf.sesame:sesame-repository-api:jar:2.7.10:compile
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:0.5.4:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:compile
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:compile
+[INFO] |  +- org.apache.cassandra:cassandra-all:jar:2.0.8:compile
+[INFO] |  |  +- net.jpountz.lz4:lz4:jar:1.2.0:compile
+[INFO] |  |  +- com.ning:compress-lzf:jar:0.8.4:compile
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] |  |  +- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3:compile
+[INFO] |  |  +- org.antlr:antlr:jar:3.2:compile
+[INFO] |  |  |  \- org.antlr:antlr-runtime:jar:3.2:compile
+[INFO] |  |  |     \- org.antlr:stringtemplate:jar:3.2:compile
+[INFO] |  |  +- com.googlecode.json-simple:json-simple:jar:1.1:compile
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.11:compile
+[INFO] |  |  +- edu.stanford.ppl:snaptree:jar:0.1:compile
+[INFO] |  |  +- org.mindrot:jbcrypt:jar:0.3m:compile
+[INFO] |  |  +- com.addthis.metrics:reporter-config:jar:2.1.0:compile
+[INFO] |  |  |  \- org.hibernate:hibernate-validator:jar:4.3.0.Final:compile
+[INFO] |  |  |     +- javax.validation:validation-api:jar:1.0.0.GA:compile
+[INFO] |  |  |     \- org.jboss.logging:jboss-logging:jar:3.1.2.GA:compile
+[INFO] |  |  +- com.thinkaurelius.thrift:thrift-server:jar:0.3.3:compile
+[INFO] |  |  +- net.sf.supercsv:super-csv:jar:2.1.0:compile
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:compile
+[INFO] |  |  +- org.apache.cassandra:cassandra-thrift:jar:2.0.8:compile
+[INFO] |  |  \- com.github.stephenc:jamm:jar:0.2.5:compile
+[INFO] |  +- commons-pool:commons-pool:jar:1.6:compile
+[INFO] |  +- org.jboss.netty:netty:jar:3.2.7.Final:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-core:jar:1.56.48:compile
+[INFO] |  |  +- com.eaio.uuid:uuid:jar:3.2:compile
+[INFO] |  |  \- joda-time:joda-time:jar:1.6.2:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-thrift:jar:1.56.48:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-cassandra:jar:1.56.48:compile
+[INFO] |  |  \- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-csv:jar:1.0-r706900_3:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-recipes:jar:1.56.48:compile
+[INFO] |  \- org.xerial.snappy:snappy-java:jar:1.0.5-M3:compile
+[INFO] +- com.thinkaurelius.titan:titan-hbase:jar:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     \- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] +- com.thinkaurelius.titan:titan-hbase-core:jar:tests:0.5.4:test
+[INFO] +- org.elasticsearch:elasticsearch-hadoop-mr:jar:2.0.0:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-n3:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-model:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-datatypes:jar:2.7.10:runtime
+[INFO] |  \- org.openrdf.sesame:sesame-rio-languages:jar:2.7.10:runtime
+[INFO] +- org.openrdf.sesame:sesame-rio-ntriples:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-rdfxml:jar:2.7.10:compile
+[INFO] |  \- org.openrdf.sesame:sesame-util:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-trig:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-trix:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-turtle:jar:2.7.10:compile
+[INFO] +- log4j:log4j:jar:1.2.16:compile
+[INFO] +- junit:junit:jar:4.11:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] \- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Hadoop: Universal binary 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-hadoop ---
+[INFO] com.thinkaurelius.titan:titan-hadoop:pom:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-hadoop-core:jar:0.5.4:compile
+[INFO] |  \- com.thinkaurelius.titan:titan-cassandra:jar:tests:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-hadoop-2:jar:0.5.4:compile
+[INFO] |  +- org.apache.hadoop:hadoop-client:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-common:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.commons:commons-math3:jar:3.1.1:compile
+[INFO] |  |  |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  |  |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  |  |  +- commons-net:commons-net:jar:1.4.1:compile
+[INFO] |  |  |  |  \- oro:oro:jar:2.0.8:compile
+[INFO] |  |  |  +- org.apache.avro:avro:jar:1.7.4:compile
+[INFO] |  |  |  |  \- com.thoughtworks.paranamer:paranamer:jar:2.3:compile
+[INFO] |  |  |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  |  |  +- org.apache.hadoop:hadoop-auth:jar:2.5.1:compile
+[INFO] |  |  |  |  \- org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:compile
+[INFO] |  |  |  |     +- org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15:compile
+[INFO] |  |  |  |     +- org.apache.directory.api:api-asn1-api:jar:1.0.0-M20:compile
+[INFO] |  |  |  |     \- org.apache.directory.api:api-util:jar:1.0.0-M20:compile
+[INFO] |  |  |  +- org.apache.zookeeper:zookeeper:jar:3.4.6:compile
+[INFO] |  |  |  \- org.apache.commons:commons-compress:jar:1.4.1:compile
+[INFO] |  |  |     \- org.tukaani:xz:jar:1.0:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-hdfs:jar:2.5.1:compile
+[INFO] |  |  |  \- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.5.1:compile
+[INFO] |  |  |  |  +- org.apache.hadoop:hadoop-yarn-client:jar:2.5.1:compile
+[INFO] |  |  |  |  |  \- com.sun.jersey:jersey-client:jar:1.9:compile
+[INFO] |  |  |  |  \- org.apache.hadoop:hadoop-yarn-server-common:jar:2.5.1:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.5.1:compile
+[INFO] |  |  |     \- org.fusesource.leveldbjni:leveldbjni-all:jar:1.8:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-yarn-api:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.5.1:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-yarn-common:jar:2.5.1:compile
+[INFO] |  |  |     +- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |  |     |  +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |  |     |  \- javax.activation:activation:jar:1.1:compile
+[INFO] |  |  |     +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |  |  |     +- com.sun.jersey:jersey-core:jar:1.18.2:compile
+[INFO] |  |  |     +- org.codehaus.jackson:jackson-jaxrs:jar:1.9.2:compile
+[INFO] |  |  |     \- org.codehaus.jackson:jackson-xc:jar:1.9.2:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-annotations:jar:2.5.1:compile
+[INFO] |  \- org.apache.mrunit:mrunit:jar:hadoop2:1.1.0:compile
+[INFO] |     +- org.mockito:mockito-core:jar:1.9.5:compile
+[INFO] |     +- org.powermock:powermock-core:jar:1.5.1:compile
+[INFO] |     |  \- org.powermock:powermock-reflect:jar:1.5.1:compile
+[INFO] |     +- org.powermock:powermock-api-mockito:jar:1.5.1:compile
+[INFO] |     |  \- org.powermock:powermock-api-support:jar:1.5.1:compile
+[INFO] |     \- org.powermock:powermock-module-junit4:jar:1.5.1:compile
+[INFO] |        \- org.powermock:powermock-module-junit4-common:jar:1.5.1:compile
+[INFO] +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- com.tinkerpop.blueprints:blueprints-sail-graph:jar:2.5.0:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-query:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryalgebra-model:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-queryparser-sparql:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryparser-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-memory:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-inferencer:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryparser-serql:jar:2.7.10:runtime
+[INFO] |  |  \- org.openrdf.sesame:sesame-queryalgebra-evaluation:jar:2.7.10:compile
+[INFO] |  |     +- org.openrdf.sesame:sesame-repository-sparql:jar:2.7.10:compile
+[INFO] |  |     |  \- org.openrdf.sesame:sesame-queryresultio-sparqlxml:jar:2.7.10:compile
+[INFO] |  |     \- org.openrdf.sesame:sesame-http-client:jar:2.7.10:compile
+[INFO] |  |        +- org.openrdf.sesame:sesame-http-protocol:jar:2.7.10:compile
+[INFO] |  |        \- org.openrdf.sesame:sesame-queryresultio-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-sail-nativerdf:jar:2.7.10:compile
+[INFO] |  +- net.fortytwo:linked-data-sail:jar:1.1:compile
+[INFO] |  |  +- net.fortytwo.ripple:ripple-flow-rdf:jar:1.1:compile
+[INFO] |  |  |  \- net.fortytwo.ripple:ripple-flow:jar:1.1:compile
+[INFO] |  |  |     \- net.fortytwo.ripple:ripple-base:jar:1.1:compile
+[INFO] |  |  |        \- org.restlet.jse:org.restlet:jar:2.1.1:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-binary:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-nquads:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-rdfjson:jar:2.7.10:compile
+[INFO] |  |  +- org.semarglproject:semargl-sesame:jar:0.4:compile
+[INFO] |  |  |  +- org.semarglproject:semargl-core:jar:0.4:compile
+[INFO] |  |  |  \- org.semarglproject:semargl-rdfa:jar:0.4:compile
+[INFO] |  |  |     \- org.semarglproject:semargl-rdf:jar:0.4:compile
+[INFO] |  |  \- com.github.jsonld-java:jsonld-java-sesame:jar:0.3:compile
+[INFO] |  |     \- com.github.jsonld-java:jsonld-java:jar:0.3:compile
+[INFO] |  |        \- org.apache.httpcomponents:httpclient-cache:jar:4.2.5:compile
+[INFO] |  \- net.fortytwo.sesametools:repository-sail:jar:1.8:compile
+[INFO] |     +- net.fortytwo.sesametools:common:jar:1.8:compile
+[INFO] |     \- org.openrdf.sesame:sesame-repository-api:jar:2.7.10:compile
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:0.5.4:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:compile
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:compile
+[INFO] |  +- org.apache.cassandra:cassandra-all:jar:2.0.8:compile
+[INFO] |  |  +- net.jpountz.lz4:lz4:jar:1.2.0:compile
+[INFO] |  |  +- com.ning:compress-lzf:jar:0.8.4:compile
+[INFO] |  |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] |  |  +- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3:compile
+[INFO] |  |  +- org.antlr:antlr:jar:3.2:compile
+[INFO] |  |  |  \- org.antlr:antlr-runtime:jar:3.2:compile
+[INFO] |  |  |     \- org.antlr:stringtemplate:jar:3.2:compile
+[INFO] |  |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] |  |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] |  |  +- com.googlecode.json-simple:json-simple:jar:1.1:compile
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.11:compile
+[INFO] |  |  +- edu.stanford.ppl:snaptree:jar:0.1:compile
+[INFO] |  |  +- org.mindrot:jbcrypt:jar:0.3m:compile
+[INFO] |  |  +- com.yammer.metrics:metrics-core:jar:2.1.2:compile
+[INFO] |  |  +- com.addthis.metrics:reporter-config:jar:2.1.0:compile
+[INFO] |  |  |  \- org.hibernate:hibernate-validator:jar:4.3.0.Final:compile
+[INFO] |  |  |     +- javax.validation:validation-api:jar:1.0.0.GA:compile
+[INFO] |  |  |     \- org.jboss.logging:jboss-logging:jar:3.1.2.GA:compile
+[INFO] |  |  +- com.thinkaurelius.thrift:thrift-server:jar:0.3.3:compile
+[INFO] |  |  |  \- com.lmax:disruptor:jar:3.0.1:compile
+[INFO] |  |  +- net.sf.supercsv:super-csv:jar:2.1.0:compile
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:compile
+[INFO] |  |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  |  |  \- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  |  +- org.apache.cassandra:cassandra-thrift:jar:2.0.8:compile
+[INFO] |  |  +- com.github.stephenc:jamm:jar:0.2.5:compile
+[INFO] |  |  \- io.netty:netty:jar:3.6.6.Final:compile
+[INFO] |  +- commons-pool:commons-pool:jar:1.6:compile
+[INFO] |  +- org.jboss.netty:netty:jar:3.2.7.Final:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-core:jar:1.56.48:compile
+[INFO] |  |  +- com.eaio.uuid:uuid:jar:3.2:compile
+[INFO] |  |  \- joda-time:joda-time:jar:1.6.2:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-thrift:jar:1.56.48:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-cassandra:jar:1.56.48:compile
+[INFO] |  |  \- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-csv:jar:1.0-r706900_3:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-recipes:jar:1.56.48:compile
+[INFO] |  \- org.xerial.snappy:snappy-java:jar:1.0.5-M3:compile
+[INFO] +- com.thinkaurelius.titan:titan-hbase:jar:0.5.4:compile
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:0.5.4:compile
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:compile
+[INFO] |     +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-grouping:jar:4.8.1:compile
+[INFO] |     \- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:compile
+[INFO] +- com.thinkaurelius.titan:titan-hbase-core:jar:tests:0.5.4:test
+[INFO] +- org.elasticsearch:elasticsearch-hadoop-mr:jar:2.0.0:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-n3:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-model:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-api:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-datatypes:jar:2.7.10:runtime
+[INFO] |  \- org.openrdf.sesame:sesame-rio-languages:jar:2.7.10:runtime
+[INFO] +- org.openrdf.sesame:sesame-rio-ntriples:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-rdfxml:jar:2.7.10:compile
+[INFO] |  \- org.openrdf.sesame:sesame-util:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-trig:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-trix:jar:2.7.10:compile
+[INFO] +- org.openrdf.sesame:sesame-rio-turtle:jar:2.7.10:compile
+[INFO] +- log4j:log4j:jar:1.2.16:compile
+[INFO] +- junit:junit:jar:4.11:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] \- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Lucene: Indexing Support 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-lucene ---
+[INFO] com.thinkaurelius.titan:titan-lucene:jar:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:test
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:test
+[INFO] |  +- junit:junit:jar:4.11:test
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-berkeleyje:jar:0.5.4:test
+[INFO] |  \- com.sleepycat:je:jar:5.0.73:test
+[INFO] +- com.thinkaurelius.titan:titan-berkeleyje:jar:tests:0.5.4:test
+[INFO] +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |  \- org.apache.lucene:lucene-sandbox:jar:4.8.1:compile
+[INFO] +- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Rexster: Support for Titan in Rexster 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-rexster ---
+[INFO] com.thinkaurelius.titan:titan-rexster:jar:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.tinkerpop.rexster:rexster-core:jar:2.5.0:compile
+[INFO] |  +- com.sun.jersey:jersey-json:jar:1.18.2:compile
+[INFO] |  |  +- com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:compile
+[INFO] |  |  |  \- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |  |     +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |  |     \- javax.activation:activation:jar:1.1:compile
+[INFO] |  |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] |  |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] |  |  +- org.codehaus.jackson:jackson-jaxrs:jar:1.9.2:compile
+[INFO] |  |  +- org.codehaus.jackson:jackson-xc:jar:1.9.2:compile
+[INFO] |  |  \- com.sun.jersey:jersey-core:jar:1.18.2:compile
+[INFO] |  \- javax.servlet:javax.servlet-api:jar:3.0.1:compile
+[INFO] +- junit:junit:jar:4.11:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Solr: Distributed Indexing Support 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-solr ---
+[INFO] com.thinkaurelius.titan:titan-solr:jar:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] |  |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  |  +- colt:colt:jar:1.2.0:compile
+[INFO] |  |  |  \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:test
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:test
+[INFO] |  +- junit:junit:jar:4.11:test
+[INFO] |  |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-berkeleyje:jar:0.5.4:test
+[INFO] |  \- com.sleepycat:je:jar:5.0.73:test
+[INFO] +- com.thinkaurelius.titan:titan-berkeleyje:jar:tests:0.5.4:test
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:0.5.4:test
+[INFO] |  +- org.apache.cassandra:cassandra-all:jar:2.0.8:test
+[INFO] |  |  +- net.jpountz.lz4:lz4:jar:1.2.0:test
+[INFO] |  |  +- com.ning:compress-lzf:jar:0.8.4:test
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.1:test
+[INFO] |  |  +- org.antlr:antlr:jar:3.2:test
+[INFO] |  |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:test
+[INFO] |  |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:test
+[INFO] |  |  +- com.googlecode.json-simple:json-simple:jar:1.1:test
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.11:test
+[INFO] |  |  +- edu.stanford.ppl:snaptree:jar:0.1:test
+[INFO] |  |  +- org.mindrot:jbcrypt:jar:0.3m:test
+[INFO] |  |  +- com.yammer.metrics:metrics-core:jar:2.1.2:test
+[INFO] |  |  +- com.addthis.metrics:reporter-config:jar:2.1.0:test
+[INFO] |  |  |  \- org.hibernate:hibernate-validator:jar:4.3.0.Final:test
+[INFO] |  |  |     +- javax.validation:validation-api:jar:1.0.0.GA:test
+[INFO] |  |  |     \- org.jboss.logging:jboss-logging:jar:3.1.2.GA:test
+[INFO] |  |  +- com.thinkaurelius.thrift:thrift-server:jar:0.3.3:test
+[INFO] |  |  |  \- com.lmax:disruptor:jar:3.0.1:test
+[INFO] |  |  +- net.sf.supercsv:super-csv:jar:2.1.0:test
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:test
+[INFO] |  |  +- org.apache.cassandra:cassandra-thrift:jar:2.0.8:test
+[INFO] |  |  +- com.github.stephenc:jamm:jar:0.2.5:test
+[INFO] |  |  \- io.netty:netty:jar:3.6.6.Final:test
+[INFO] |  +- commons-pool:commons-pool:jar:1.6:test
+[INFO] |  +- org.jboss.netty:netty:jar:3.2.7.Final:test
+[INFO] |  +- com.netflix.astyanax:astyanax-core:jar:1.56.48:test
+[INFO] |  |  \- com.eaio.uuid:uuid:jar:3.2:test
+[INFO] |  +- com.netflix.astyanax:astyanax-thrift:jar:1.56.48:test
+[INFO] |  +- com.netflix.astyanax:astyanax-cassandra:jar:1.56.48:test
+[INFO] |  |  \- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-csv:jar:1.0-r706900_3:test
+[INFO] |  +- com.netflix.astyanax:astyanax-recipes:jar:1.56.48:test
+[INFO] |  \- org.xerial.snappy:snappy-java:jar:1.0.5-M3:test
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:tests:0.5.4:test
+[INFO] +- org.apache.solr:solr-solrj:jar:4.8.1:compile
+[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  +- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  +- org.apache.httpcomponents:httpmime:jar:4.3.1:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper:jar:3.4.6:compile
+[INFO] |  +- org.codehaus.woodstox:wstx-asl:jar:3.2.7:compile
+[INFO] |  \- org.noggit:noggit:jar:0.5:compile
+[INFO] +- org.apache.solr:solr-core:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-analyzers-kuromoji:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-analyzers-phonetic:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-codecs:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-expressions:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-grouping:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-highlighter:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-join:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-memory:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-misc:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-suggest:jar:4.8.1:compile
+[INFO] |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  +- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3:compile
+[INFO] |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  +- commons-fileupload:commons-fileupload:jar:1.2.1:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  +- joda-time:joda-time:jar:1.6.2:compile
+[INFO] |  +- org.antlr:antlr-runtime:jar:3.2:compile
+[INFO] |  +- org.apache.hadoop:hadoop-annotations:jar:2.2.0:compile
+[INFO] |  |  \- jdk.tools:jdk.tools:jar:1.7:system
+[INFO] |  +- org.apache.hadoop:hadoop-auth:jar:2.2.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-common:jar:2.2.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-hdfs:jar:2.2.0:compile
+[INFO] |  +- org.eclipse.jetty:jetty-continuation:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-deploy:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-http:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-io:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-jmx:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-security:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-server:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-servlet:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-util:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-webapp:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty:jetty-xml:jar:8.1.10.v20130312:compile
+[INFO] |  +- org.eclipse.jetty.orbit:javax.servlet:jar:3.0.0.v201112011016:compile
+[INFO] |  +- org.ow2.asm:asm:jar:4.1:compile
+[INFO] |  +- org.ow2.asm:asm-commons:jar:4.1:compile
+[INFO] |  +- org.restlet.jee:org.restlet:jar:2.1.1:compile
+[INFO] |  \- org.restlet.jee:org.restlet.ext.servlet:jar:2.1.1:compile
+[INFO] +- org.apache.solr:solr-test-framework:jar:4.8.1:test
+[INFO] |  +- org.apache.lucene:lucene-test-framework:jar:4.8.1:test
+[INFO] |  +- com.carrotsearch.randomizedtesting:junit4-ant:jar:2.1.3:test
+[INFO] |  \- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] +- com.vividsolutions:jts:jar:1.13:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-All: Complete Titan Distribution 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-all ---
+[INFO] com.thinkaurelius.titan:titan-all:jar:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  \- colt:colt:jar:1.2.0:compile
+[INFO] |  |     \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  +- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  |  \- jline:jline:jar:1.0:compile
+[INFO] |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:0.5.4:compile
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:compile
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:compile
+[INFO] |  +- org.apache.cassandra:cassandra-all:jar:2.0.8:compile
+[INFO] |  |  +- net.jpountz.lz4:lz4:jar:1.2.0:compile
+[INFO] |  |  +- com.ning:compress-lzf:jar:0.8.4:compile
+[INFO] |  |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] |  |  +- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3:compile
+[INFO] |  |  +- org.antlr:antlr:jar:3.2:compile
+[INFO] |  |  +- com.googlecode.json-simple:json-simple:jar:1.1:compile
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.11:compile
+[INFO] |  |  +- edu.stanford.ppl:snaptree:jar:0.1:compile
+[INFO] |  |  +- org.mindrot:jbcrypt:jar:0.3m:compile
+[INFO] |  |  +- com.yammer.metrics:metrics-core:jar:2.1.2:compile
+[INFO] |  |  +- com.addthis.metrics:reporter-config:jar:2.1.0:compile
+[INFO] |  |  |  \- org.hibernate:hibernate-validator:jar:4.3.0.Final:compile
+[INFO] |  |  |     +- javax.validation:validation-api:jar:1.0.0.GA:compile
+[INFO] |  |  |     \- org.jboss.logging:jboss-logging:jar:3.1.2.GA:compile
+[INFO] |  |  +- com.thinkaurelius.thrift:thrift-server:jar:0.3.3:compile
+[INFO] |  |  |  \- com.lmax:disruptor:jar:3.0.1:compile
+[INFO] |  |  +- net.sf.supercsv:super-csv:jar:2.1.0:compile
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:compile
+[INFO] |  |  +- org.apache.cassandra:cassandra-thrift:jar:2.0.8:compile
+[INFO] |  |  +- com.github.stephenc:jamm:jar:0.2.5:compile
+[INFO] |  |  \- io.netty:netty:jar:3.6.6.Final:compile
+[INFO] |  +- commons-pool:commons-pool:jar:1.6:compile
+[INFO] |  +- org.jboss.netty:netty:jar:3.2.7.Final:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-core:jar:1.56.48:compile
+[INFO] |  |  +- com.eaio.uuid:uuid:jar:3.2:compile
+[INFO] |  |  \- joda-time:joda-time:jar:1.6.2:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-thrift:jar:1.56.48:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-cassandra:jar:1.56.48:compile
+[INFO] |  |  \- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-csv:jar:1.0-r706900_3:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-recipes:jar:1.56.48:compile
+[INFO] |  \- org.xerial.snappy:snappy-java:jar:1.0.5-M3:compile
+[INFO] +- com.thinkaurelius.titan:titan-berkeleyje:jar:0.5.4:compile
+[INFO] |  \- com.sleepycat:je:jar:5.0.73:compile
+[INFO] +- com.thinkaurelius.titan:titan-hbase:jar:0.5.4:compile
+[INFO] +- org.apache.hbase:hbase-client:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-annotations:jar:1.1.1:compile
+[INFO] |  |  \- jdk.tools:jdk.tools:jar:1.7:system
+[INFO] |  +- org.apache.hbase:hbase-common:jar:1.1.1:compile
+[INFO] |  |  \- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  +- org.apache.hbase:hbase-protocol:jar:1.1.1:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  +- io.netty:netty-all:jar:4.0.23.Final:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper:jar:3.4.6:compile
+[INFO] |  +- org.apache.htrace:htrace-core:jar:3.1.0-incubating:compile
+[INFO] |  +- org.jruby.jcodings:jcodings:jar:1.0.8:compile
+[INFO] |  +- org.jruby.joni:joni:jar:2.1.2:compile
+[INFO] |  +- org.apache.hadoop:hadoop-auth:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  |  \- org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.api:api-asn1-api:jar:1.0.0-M20:compile
+[INFO] |  |     \- org.apache.directory.api:api-util:jar:1.0.0-M20:compile
+[INFO] |  +- org.apache.hadoop:hadoop-common:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.1.1:compile
+[INFO] |  |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  |  +- commons-net:commons-net:jar:1.4.1:compile
+[INFO] |  |  |  \- oro:oro:jar:2.0.8:compile
+[INFO] |  |  +- commons-el:commons-el:jar:1.0:runtime
+[INFO] |  |  +- org.apache.avro:avro:jar:1.7.4:compile
+[INFO] |  |  |  \- com.thoughtworks.paranamer:paranamer:jar:2.3:compile
+[INFO] |  |  +- com.jcraft:jsch:jar:0.1.42:compile
+[INFO] |  |  \- org.apache.commons:commons-compress:jar:1.4.1:compile
+[INFO] |  |     \- org.tukaani:xz:jar:1.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-yarn-common:jar:2.5.1:compile
+[INFO] |  |     \- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |        +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |        \- javax.activation:activation:jar:1.1:compile
+[INFO] |  +- com.github.stephenc.findbugs:findbugs-annotations:jar:1.3.9-1:compile
+[INFO] |  \- junit:junit:jar:4.11:compile
+[INFO] |     \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] +- com.thinkaurelius.titan:titan-hadoop:jar:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-sail-graph:jar:2.5.0:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-api:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-query:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryalgebra-model:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-queryparser-sparql:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryparser-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-memory:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-sail-inferencer:jar:2.7.10:compile
+[INFO] |  |  |  |  \- org.openrdf.sesame:sesame-queryparser-serql:jar:2.7.10:runtime
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryalgebra-evaluation:jar:2.7.10:compile
+[INFO] |  |  |     +- org.openrdf.sesame:sesame-repository-sparql:jar:2.7.10:compile
+[INFO] |  |  |     |  \- org.openrdf.sesame:sesame-queryresultio-sparqlxml:jar:2.7.10:compile
+[INFO] |  |  |     \- org.openrdf.sesame:sesame-http-client:jar:2.7.10:compile
+[INFO] |  |  |        +- org.openrdf.sesame:sesame-http-protocol:jar:2.7.10:compile
+[INFO] |  |  |        \- org.openrdf.sesame:sesame-queryresultio-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-nativerdf:jar:2.7.10:compile
+[INFO] |  |  +- net.fortytwo:linked-data-sail:jar:1.1:compile
+[INFO] |  |  |  +- net.fortytwo.ripple:ripple-flow-rdf:jar:1.1:compile
+[INFO] |  |  |  |  \- net.fortytwo.ripple:ripple-flow:jar:1.1:compile
+[INFO] |  |  |  |     \- net.fortytwo.ripple:ripple-base:jar:1.1:compile
+[INFO] |  |  |  |        \- org.restlet.jse:org.restlet:jar:2.1.1:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-rio-binary:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-rio-nquads:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-rio-rdfjson:jar:2.7.10:compile
+[INFO] |  |  |  +- org.semarglproject:semargl-sesame:jar:0.4:compile
+[INFO] |  |  |  |  +- org.semarglproject:semargl-core:jar:0.4:compile
+[INFO] |  |  |  |  \- org.semarglproject:semargl-rdfa:jar:0.4:compile
+[INFO] |  |  |  |     \- org.semarglproject:semargl-rdf:jar:0.4:compile
+[INFO] |  |  |  \- com.github.jsonld-java:jsonld-java-sesame:jar:0.3:compile
+[INFO] |  |  |     \- com.github.jsonld-java:jsonld-java:jar:0.3:compile
+[INFO] |  |  |        \- org.apache.httpcomponents:httpclient-cache:jar:4.2.5:compile
+[INFO] |  |  \- net.fortytwo.sesametools:repository-sail:jar:1.8:compile
+[INFO] |  |     +- net.fortytwo.sesametools:common:jar:1.8:compile
+[INFO] |  |     \- org.openrdf.sesame:sesame-repository-api:jar:2.7.10:compile
+[INFO] |  +- org.elasticsearch:elasticsearch-hadoop-mr:jar:2.0.0:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-n3:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-model:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-datatypes:jar:2.7.10:runtime
+[INFO] |  |  \- org.openrdf.sesame:sesame-rio-languages:jar:2.7.10:runtime
+[INFO] |  +- org.openrdf.sesame:sesame-rio-ntriples:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-rdfxml:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-util:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-trig:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-trix:jar:2.7.10:compile
+[INFO] |  \- org.openrdf.sesame:sesame-rio-turtle:jar:2.7.10:compile
+[INFO] +- org.apache.hadoop:hadoop-client:jar:2.5.1:compile
+[INFO] |  +- org.apache.hadoop:hadoop-hdfs:jar:2.5.1:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.hadoop:hadoop-yarn-client:jar:2.5.1:compile
+[INFO] |  |  |  |  \- com.sun.jersey:jersey-client:jar:1.9:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-yarn-server-common:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.5.1:compile
+[INFO] |  |     \- org.fusesource.leveldbjni:leveldbjni-all:jar:1.8:compile
+[INFO] |  +- org.apache.hadoop:hadoop-yarn-api:jar:2.5.1:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.5.1:compile
+[INFO] |  \- org.apache.hadoop:hadoop-annotations:jar:2.5.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:0.5.4:compile
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:compile
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:compile
+[INFO] |     \- org.apache.lucene:lucene-grouping:jar:4.8.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-solr:jar:0.5.4:compile
+[INFO] |  +- org.apache.solr:solr-solrj:jar:4.8.1:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpmime:jar:4.3.1:compile
+[INFO] |  |  +- org.codehaus.woodstox:wstx-asl:jar:3.2.7:compile
+[INFO] |  |  \- org.noggit:noggit:jar:0.5:compile
+[INFO] |  +- org.apache.solr:solr-core:jar:4.8.1:compile
+[INFO] |  |  +- org.apache.lucene:lucene-analyzers-kuromoji:jar:4.8.1:compile
+[INFO] |  |  +- org.apache.lucene:lucene-analyzers-phonetic:jar:4.8.1:compile
+[INFO] |  |  +- org.apache.lucene:lucene-expressions:jar:4.8.1:compile
+[INFO] |  |  +- commons-fileupload:commons-fileupload:jar:1.2.1:compile
+[INFO] |  |  +- org.antlr:antlr-runtime:jar:3.2:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-continuation:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-deploy:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-http:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-io:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-jmx:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-security:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-server:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-servlet:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-util:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-webapp:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-xml:jar:8.1.10.v20130312:compile
+[INFO] |  |  +- org.eclipse.jetty.orbit:javax.servlet:jar:3.0.0.v201112011016:compile
+[INFO] |  |  +- org.ow2.asm:asm:jar:4.1:compile
+[INFO] |  |  +- org.ow2.asm:asm-commons:jar:4.1:compile
+[INFO] |  |  +- org.restlet.jee:org.restlet:jar:2.1.1:compile
+[INFO] |  |  \- org.restlet.jee:org.restlet.ext.servlet:jar:2.1.1:compile
+[INFO] |  +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |  \- com.vividsolutions:jts:jar:1.13:compile
+[INFO] +- com.thinkaurelius.titan:titan-lucene:jar:0.5.4:compile
+[INFO] |  +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] |  +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |  \- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-rexster:jar:0.5.4:compile
+[INFO] |  \- com.tinkerpop.rexster:rexster-core:jar:2.5.0:compile
+[INFO] |     +- com.sun.jersey:jersey-json:jar:1.18.2:compile
+[INFO] |     |  +- com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:compile
+[INFO] |     |  \- com.sun.jersey:jersey-core:jar:1.18.2:compile
+[INFO] |     \- javax.servlet:javax.servlet-api:jar:3.0.1:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] +- org.codehaus.jackson:jackson-xc:jar:1.9.2:compile
+[INFO] +- org.codehaus.jackson:jackson-jaxrs:jar:1.9.2:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  \- org.json:json:jar:20090211:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Dist: Tar and Zip Archives 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-dist ---
+[INFO] com.thinkaurelius.titan:titan-dist:pom:0.5.4
+[INFO] +- com.thinkaurelius.titan:titan-all:pom:0.5.4:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-cassandra:jar:0.5.4:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-berkeleyje:jar:0.5.4:compile
+[INFO] |  |  \- com.sleepycat:je:jar:5.0.73:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-hbase:jar:0.5.4:compile
+[INFO] |  +- org.apache.hbase:hbase-client:jar:1.1.1:compile
+[INFO] |  |  +- org.apache.hbase:hbase-annotations:jar:1.1.1:compile
+[INFO] |  |  |  \- jdk.tools:jdk.tools:jar:1.7:system
+[INFO] |  |  +- org.apache.hbase:hbase-common:jar:1.1.1:compile
+[INFO] |  |  |  \- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  |  +- org.apache.hbase:hbase-protocol:jar:1.1.1:compile
+[INFO] |  |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  |  +- io.netty:netty-all:jar:4.0.23.Final:compile
+[INFO] |  |  +- org.apache.zookeeper:zookeeper:jar:3.4.6:compile
+[INFO] |  |  +- org.apache.htrace:htrace-core:jar:3.1.0-incubating:compile
+[INFO] |  |  +- org.jruby.jcodings:jcodings:jar:1.0.8:compile
+[INFO] |  |  +- org.jruby.joni:joni:jar:2.1.2:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-auth:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  |  |  \- org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:compile
+[INFO] |  |  |     +- org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15:compile
+[INFO] |  |  |     +- org.apache.directory.api:api-asn1-api:jar:1.0.0-M20:compile
+[INFO] |  |  |     \- org.apache.directory.api:api-util:jar:1.0.0-M20:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-common:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.commons:commons-math3:jar:3.1.1:compile
+[INFO] |  |  |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  |  |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  |  |  +- commons-net:commons-net:jar:1.4.1:compile
+[INFO] |  |  |  |  \- oro:oro:jar:2.0.8:compile
+[INFO] |  |  |  +- commons-el:commons-el:jar:1.0:runtime
+[INFO] |  |  |  +- org.apache.avro:avro:jar:1.7.4:compile
+[INFO] |  |  |  |  \- com.thoughtworks.paranamer:paranamer:jar:2.3:compile
+[INFO] |  |  |  +- com.jcraft:jsch:jar:0.1.42:compile
+[INFO] |  |  |  \- org.apache.commons:commons-compress:jar:1.4.1:compile
+[INFO] |  |  |     \- org.tukaani:xz:jar:1.0:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.5.1:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-yarn-common:jar:2.5.1:compile
+[INFO] |  |  \- com.github.stephenc.findbugs:findbugs-annotations:jar:1.3.9-1:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-hadoop:jar:0.5.4:compile
+[INFO] |  +- org.apache.hadoop:hadoop-client:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-hdfs:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.5.1:compile
+[INFO] |  |  |  |  +- org.apache.hadoop:hadoop-yarn-client:jar:2.5.1:compile
+[INFO] |  |  |  |  |  \- com.sun.jersey:jersey-client:jar:1.9:compile
+[INFO] |  |  |  |  \- org.apache.hadoop:hadoop-yarn-server-common:jar:2.5.1:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.5.1:compile
+[INFO] |  |  |     \- org.fusesource.leveldbjni:leveldbjni-all:jar:1.8:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-yarn-api:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-annotations:jar:2.5.1:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-es:jar:0.5.4:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-solr:jar:0.5.4:compile
+[INFO] |  |  +- org.apache.solr:solr-solrj:jar:4.8.1:compile
+[INFO] |  |  |  +- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  |  |  +- org.apache.httpcomponents:httpmime:jar:4.3.1:compile
+[INFO] |  |  |  +- org.codehaus.woodstox:wstx-asl:jar:3.2.7:compile
+[INFO] |  |  |  \- org.noggit:noggit:jar:0.5:compile
+[INFO] |  |  +- org.apache.solr:solr-core:jar:4.8.1:compile
+[INFO] |  |  |  +- org.apache.lucene:lucene-analyzers-kuromoji:jar:4.8.1:compile
+[INFO] |  |  |  +- org.apache.lucene:lucene-analyzers-phonetic:jar:4.8.1:compile
+[INFO] |  |  |  +- org.apache.lucene:lucene-expressions:jar:4.8.1:compile
+[INFO] |  |  |  +- commons-fileupload:commons-fileupload:jar:1.2.1:compile
+[INFO] |  |  |  +- org.antlr:antlr-runtime:jar:3.2:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-continuation:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-deploy:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-http:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-io:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-jmx:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-security:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-server:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-servlet:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-util:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-webapp:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-xml:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty.orbit:javax.servlet:jar:3.0.0.v201112011016:compile
+[INFO] |  |  |  +- org.ow2.asm:asm:jar:4.1:compile
+[INFO] |  |  |  +- org.ow2.asm:asm-commons:jar:4.1:compile
+[INFO] |  |  |  +- org.restlet.jee:org.restlet:jar:2.1.1:compile
+[INFO] |  |  |  \- org.restlet.jee:org.restlet.ext.servlet:jar:2.1.1:compile
+[INFO] |  |  +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |  |  \- com.vividsolutions:jts:jar:1.13:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-lucene:jar:0.5.4:compile
+[INFO] |  |  +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] |  |  +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] |  |  +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |  |  \- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-rexster:jar:0.5.4:compile
+[INFO] |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-xc:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-jaxrs:jar:1.9.2:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] +- com.thinkaurelius.titan:titan-hadoop-core:zip:example-data:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  \- colt:colt:jar:1.2.0:compile
+[INFO] |  |     \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-sail-graph:jar:2.5.0:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-api:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-query:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryalgebra-model:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-queryparser-sparql:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryparser-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-memory:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-sail-inferencer:jar:2.7.10:compile
+[INFO] |  |  |  |  \- org.openrdf.sesame:sesame-queryparser-serql:jar:2.7.10:runtime
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryalgebra-evaluation:jar:2.7.10:compile
+[INFO] |  |  |     +- org.openrdf.sesame:sesame-repository-sparql:jar:2.7.10:compile
+[INFO] |  |  |     |  \- org.openrdf.sesame:sesame-queryresultio-sparqlxml:jar:2.7.10:compile
+[INFO] |  |  |     \- org.openrdf.sesame:sesame-http-client:jar:2.7.10:compile
+[INFO] |  |  |        +- org.openrdf.sesame:sesame-http-protocol:jar:2.7.10:compile
+[INFO] |  |  |        \- org.openrdf.sesame:sesame-queryresultio-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-nativerdf:jar:2.7.10:compile
+[INFO] |  |  +- net.fortytwo:linked-data-sail:jar:1.1:compile
+[INFO] |  |  |  +- net.fortytwo.ripple:ripple-flow-rdf:jar:1.1:compile
+[INFO] |  |  |  |  \- net.fortytwo.ripple:ripple-flow:jar:1.1:compile
+[INFO] |  |  |  |     \- net.fortytwo.ripple:ripple-base:jar:1.1:compile
+[INFO] |  |  |  |        \- org.restlet.jse:org.restlet:jar:2.1.1:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-rio-binary:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-rio-nquads:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-rio-rdfjson:jar:2.7.10:compile
+[INFO] |  |  |  +- org.semarglproject:semargl-sesame:jar:0.4:compile
+[INFO] |  |  |  |  +- org.semarglproject:semargl-core:jar:0.4:compile
+[INFO] |  |  |  |  \- org.semarglproject:semargl-rdfa:jar:0.4:compile
+[INFO] |  |  |  |     \- org.semarglproject:semargl-rdf:jar:0.4:compile
+[INFO] |  |  |  \- com.github.jsonld-java:jsonld-java-sesame:jar:0.3:compile
+[INFO] |  |  |     \- com.github.jsonld-java:jsonld-java:jar:0.3:compile
+[INFO] |  |  |        \- org.apache.httpcomponents:httpclient-cache:jar:4.2.5:compile
+[INFO] |  |  \- net.fortytwo.sesametools:repository-sail:jar:1.8:compile
+[INFO] |  |     +- net.fortytwo.sesametools:common:jar:1.8:compile
+[INFO] |  |     \- org.openrdf.sesame:sesame-repository-api:jar:2.7.10:compile
+[INFO] |  +- org.elasticsearch:elasticsearch-hadoop-mr:jar:2.0.0:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-n3:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-model:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-datatypes:jar:2.7.10:runtime
+[INFO] |  |  \- org.openrdf.sesame:sesame-rio-languages:jar:2.7.10:runtime
+[INFO] |  +- org.openrdf.sesame:sesame-rio-ntriples:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-rdfxml:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-util:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-trig:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-trix:jar:2.7.10:compile
+[INFO] |  \- org.openrdf.sesame:sesame-rio-turtle:jar:2.7.10:compile
+[INFO] +- net.java.dev.jna:jna:jar:3.2.7:compile
+[INFO] +- com.tinkerpop.rexster:rexster-console:jar:2.5.0:compile
+[INFO] |  +- com.tinkerpop.rexster:rexster-core:jar:2.5.0:compile
+[INFO] |  +- com.tinkerpop.rexster:rexster-protocol:jar:2.5.0:compile
+[INFO] |  |  +- org.msgpack:msgpack:jar:0.6.5:compile
+[INFO] |  |  \- org.glassfish.grizzly:grizzly-framework:jar:2.2.16:compile
+[INFO] |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  +- jline:jline:jar:1.0:compile
+[INFO] |  \- commons-cli:commons-cli:jar:1.2:compile
+[INFO] +- com.tinkerpop.rexster:rexster-server:jar:2.5.0:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  \- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  +- com.sun.jersey:jersey-server:jar:1.18.2:compile
+[INFO] |  |  \- com.sun.jersey:jersey-core:jar:1.18.2:compile
+[INFO] |  +- com.sun.jersey:jersey-grizzly2:jar:1.18.2:compile
+[INFO] |  |  +- org.glassfish.grizzly:grizzly-http:jar:2.2.16:compile
+[INFO] |  |  \- org.glassfish.grizzly:grizzly-http-server:jar:2.2.16:compile
+[INFO] |  +- com.sun.jersey:jersey-json:jar:1.18.2:compile
+[INFO] |  |  \- com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:compile
+[INFO] |  |     \- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |        +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |        \- javax.activation:activation:jar:1.1:compile
+[INFO] |  +- com.sun.jersey:jersey-servlet:jar:1.17:compile
+[INFO] |  +- org.glassfish.grizzly:grizzly-http-servlet:jar:2.2.16:compile
+[INFO] |  +- org.glassfish.grizzly:grizzly-core:jar:2.2.16:compile
+[INFO] |  |  +- org.glassfish.grizzly:grizzly-portunif:jar:2.2.16:compile
+[INFO] |  |  \- org.glassfish.grizzly:grizzly-rcm:jar:2.2.16:compile
+[INFO] |  +- org.glassfish.gmbal:gmbal:jar:3.2.0-b003:compile
+[INFO] |  |  +- org.glassfish.external:management-api:jar:3.0.0-b012:compile
+[INFO] |  |  +- org.glassfish.pfl:pfl-basic:jar:1.0.0-b001:compile
+[INFO] |  |  +- org.glassfish.pfl:pfl-tf:jar:1.0.0-b001:compile
+[INFO] |  |  |  \- org.glassfish.pfl:pfl-asm:jar:1.0.0-b001:compile
+[INFO] |  |  +- org.glassfish.pfl:pfl-tf-tools:jar:1.0.0-b001:compile
+[INFO] |  |  \- org.glassfish.pfl:pfl-basic-tools:jar:1.0.0-b001:compile
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-servlets:jar:3.0.0:compile
+[INFO] |  |  +- com.codahale.metrics:metrics-healthchecks:jar:3.0.0:compile
+[INFO] |  |  +- com.codahale.metrics:metrics-json:jar:3.0.0:compile
+[INFO] |  |  \- com.codahale.metrics:metrics-jvm:jar:3.0.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-jersey:jar:3.0.0:compile
+[INFO] |  |  \- com.codahale.metrics:metrics-annotation:jar:3.0.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |  |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] |  \- commons-io:commons-io:jar:2.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:compile
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:compile
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-hbase-core:jar:tests:0.5.4:test
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:tests:0.5.4:test
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:compile
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:compile
+[INFO] |     \- org.apache.lucene:lucene-grouping:jar:4.8.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:tests:0.5.4:test
+[INFO] |  +- org.apache.cassandra:cassandra-all:jar:2.0.8:compile
+[INFO] |  |  +- net.jpountz.lz4:lz4:jar:1.2.0:compile
+[INFO] |  |  +- com.ning:compress-lzf:jar:0.8.4:compile
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] |  |  +- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3:compile
+[INFO] |  |  +- org.antlr:antlr:jar:3.2:compile
+[INFO] |  |  +- com.googlecode.json-simple:json-simple:jar:1.1:compile
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.11:compile
+[INFO] |  |  +- edu.stanford.ppl:snaptree:jar:0.1:compile
+[INFO] |  |  +- org.mindrot:jbcrypt:jar:0.3m:compile
+[INFO] |  |  +- com.yammer.metrics:metrics-core:jar:2.1.2:compile
+[INFO] |  |  +- com.addthis.metrics:reporter-config:jar:2.1.0:compile
+[INFO] |  |  |  \- org.hibernate:hibernate-validator:jar:4.3.0.Final:compile
+[INFO] |  |  |     +- javax.validation:validation-api:jar:1.0.0.GA:compile
+[INFO] |  |  |     \- org.jboss.logging:jboss-logging:jar:3.1.2.GA:compile
+[INFO] |  |  +- com.thinkaurelius.thrift:thrift-server:jar:0.3.3:compile
+[INFO] |  |  |  \- com.lmax:disruptor:jar:3.0.1:compile
+[INFO] |  |  +- net.sf.supercsv:super-csv:jar:2.1.0:compile
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:compile
+[INFO] |  |  +- org.apache.cassandra:cassandra-thrift:jar:2.0.8:compile
+[INFO] |  |  +- com.github.stephenc:jamm:jar:0.2.5:compile
+[INFO] |  |  \- io.netty:netty:jar:3.6.6.Final:compile
+[INFO] |  +- commons-pool:commons-pool:jar:1.6:compile
+[INFO] |  +- org.jboss.netty:netty:jar:3.2.7.Final:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-core:jar:1.56.48:compile
+[INFO] |  |  +- com.eaio.uuid:uuid:jar:3.2:compile
+[INFO] |  |  \- joda-time:joda-time:jar:1.6.2:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-thrift:jar:1.56.48:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-cassandra:jar:1.56.48:compile
+[INFO] |  |  \- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-csv:jar:1.0-r706900_3:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-recipes:jar:1.56.48:compile
+[INFO] |  \- org.xerial.snappy:snappy-java:jar:1.0.5-M3:compile
+[INFO] +- junit:junit:jar:4.11:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.apache.velocity:velocity:jar:1.7:test
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  \- commons-lang:commons-lang:jar:2.5:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Titan-Dist: Archive with Hadoop 2 0.5.4
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ titan-dist-hadoop-2 ---
+[INFO] com.thinkaurelius.titan:titan-dist-hadoop-2:pom:0.5.4
+[INFO] +- org.apache.hbase:hbase-client:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-annotations:jar:1.1.1:compile
+[INFO] |  |  \- jdk.tools:jdk.tools:jar:1.7:system
+[INFO] |  +- org.apache.hbase:hbase-common:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-protocol:jar:1.1.1:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.7:compile
+[INFO] |  +- commons-io:commons-io:jar:2.1:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.5:compile
+[INFO] |  +- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] |  +- com.google.guava:guava:jar:15.0:compile
+[INFO] |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  +- io.netty:netty-all:jar:4.0.23.Final:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper:jar:3.4.6:compile
+[INFO] |  +- org.apache.htrace:htrace-core:jar:3.1.0-incubating:compile
+[INFO] |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] |  +- org.jruby.jcodings:jcodings:jar:1.0.8:compile
+[INFO] |  +- org.jruby.joni:joni:jar:2.1.2:compile
+[INFO] |  +- org.apache.hadoop:hadoop-auth:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.5:compile
+[INFO] |  |  |  \- org.apache.httpcomponents:httpcore:jar:4.2.5:compile
+[INFO] |  |  \- org.apache.directory.server:apacheds-kerberos-codec:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.server:apacheds-i18n:jar:2.0.0-M15:compile
+[INFO] |  |     +- org.apache.directory.api:api-asn1-api:jar:1.0.0-M20:compile
+[INFO] |  |     \- org.apache.directory.api:api-util:jar:1.0.0-M20:compile
+[INFO] |  +- org.apache.hadoop:hadoop-common:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-annotations:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.commons:commons-math3:jar:3.1.1:compile
+[INFO] |  |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  |  +- commons-net:commons-net:jar:1.4.1:compile
+[INFO] |  |  |  \- oro:oro:jar:2.0.8:compile
+[INFO] |  |  +- commons-el:commons-el:jar:1.0:compile
+[INFO] |  |  +- org.apache.avro:avro:jar:1.7.4:compile
+[INFO] |  |  |  \- com.thoughtworks.paranamer:paranamer:jar:2.3:compile
+[INFO] |  |  +- com.jcraft:jsch:jar:0.1.42:compile
+[INFO] |  |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |  |  \- org.apache.commons:commons-compress:jar:1.4.1:compile
+[INFO] |  |     \- org.tukaani:xz:jar:1.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-yarn-common:jar:2.5.1:compile
+[INFO] |  |  |  \- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |  |     +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |  |     \- javax.activation:activation:jar:1.1:compile
+[INFO] |  |  \- io.netty:netty:jar:3.6.6.Final:compile
+[INFO] |  \- com.github.stephenc.findbugs:findbugs-annotations:jar:1.3.9-1:compile
+[INFO] +- org.apache.hbase:hbase-server:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-procedure:jar:1.1.1:compile
+[INFO] |  |  \- org.apache.hbase:hbase-common:jar:tests:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-prefix-tree:jar:1.1.1:runtime
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- org.apache.hbase:hbase-hadoop-compat:jar:1.1.1:compile
+[INFO] |  +- org.apache.hbase:hbase-hadoop2-compat:jar:1.1.1:compile
+[INFO] |  +- com.yammer.metrics:metrics-core:jar:2.1.2:compile
+[INFO] |  +- com.sun.jersey:jersey-core:jar:1.18.2:compile
+[INFO] |  +- com.sun.jersey:jersey-server:jar:1.18.2:compile
+[INFO] |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  +- org.apache.commons:commons-math:jar:2.2:compile
+[INFO] |  +- org.mortbay.jetty:jetty:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jetty-sslengine:jar:6.1.26:compile
+[INFO] |  +- org.mortbay.jetty:jsp-2.1:jar:6.1.14:compile
+[INFO] |  +- org.mortbay.jetty:jsp-api-2.1:jar:6.1.14:compile
+[INFO] |  +- org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:compile
+[INFO] |  +- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile
+[INFO] |  +- org.codehaus.jackson:jackson-jaxrs:jar:1.9.2:compile
+[INFO] |  +- tomcat:jasper-compiler:jar:5.5.23:compile
+[INFO] |  +- tomcat:jasper-runtime:jar:5.5.23:compile
+[INFO] |  +- org.jamon:jamon-runtime:jar:2.3.1:compile
+[INFO] |  +- com.lmax:disruptor:jar:3.3.0:compile
+[INFO] |  +- org.apache.hadoop:hadoop-client:jar:2.5.1:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.5.1:compile
+[INFO] |  |  |  +- org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.5.1:compile
+[INFO] |  |  |  |  +- org.apache.hadoop:hadoop-yarn-client:jar:2.5.1:compile
+[INFO] |  |  |  |  |  \- com.sun.jersey:jersey-client:jar:1.9:compile
+[INFO] |  |  |  |  \- org.apache.hadoop:hadoop-yarn-server-common:jar:2.5.1:compile
+[INFO] |  |  |  \- org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.5.1:compile
+[INFO] |  |  |     \- org.fusesource.leveldbjni:leveldbjni-all:jar:1.8:compile
+[INFO] |  |  +- org.apache.hadoop:hadoop-yarn-api:jar:2.5.1:compile
+[INFO] |  |  \- org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.5.1:compile
+[INFO] |  \- org.apache.hadoop:hadoop-hdfs:jar:2.5.1:compile
+[INFO] |     \- commons-daemon:commons-daemon:jar:1.0.13:compile
+[INFO] +- com.thinkaurelius.titan:titan-all:pom:0.5.4:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-core:jar:0.5.4:compile
+[INFO] |  |  +- com.thinkaurelius.groovy-shaded-asm:groovy-shaded-asm:jar:1.8.9:compile
+[INFO] |  |  |  \- antlr:antlr:jar:2.7.7:compile
+[INFO] |  |  +- com.tinkerpop:frames:jar:2.5.0:compile
+[INFO] |  |  |  \- org.javassist:javassist:jar:3.18.0-GA:compile
+[INFO] |  |  +- org.glassfish:javax.json:jar:1.0:compile
+[INFO] |  |  +- org.reflections:reflections:jar:0.9.9-RC1:compile
+[INFO] |  |  |  \- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  |     \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  |  +- com.spatial4j:spatial4j:jar:0.4.1:compile
+[INFO] |  |  +- com.carrotsearch:hppc:jar:0.6.0:compile
+[INFO] |  |  +- com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2:compile
+[INFO] |  |  \- com.esotericsoftware.kryo:kryo:jar:2.22:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-cassandra:jar:0.5.4:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-berkeleyje:jar:0.5.4:compile
+[INFO] |  |  \- com.sleepycat:je:jar:5.0.73:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-hbase:jar:0.5.4:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-hadoop:jar:0.5.4:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-es:jar:0.5.4:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-solr:jar:0.5.4:compile
+[INFO] |  |  +- org.apache.solr:solr-solrj:jar:4.8.1:compile
+[INFO] |  |  |  +- org.apache.httpcomponents:httpmime:jar:4.3.1:compile
+[INFO] |  |  |  +- org.codehaus.woodstox:wstx-asl:jar:3.2.7:compile
+[INFO] |  |  |  \- org.noggit:noggit:jar:0.5:compile
+[INFO] |  |  +- org.apache.solr:solr-core:jar:4.8.1:compile
+[INFO] |  |  |  +- org.apache.lucene:lucene-analyzers-kuromoji:jar:4.8.1:compile
+[INFO] |  |  |  +- org.apache.lucene:lucene-analyzers-phonetic:jar:4.8.1:compile
+[INFO] |  |  |  +- org.apache.lucene:lucene-expressions:jar:4.8.1:compile
+[INFO] |  |  |  +- commons-fileupload:commons-fileupload:jar:1.2.1:compile
+[INFO] |  |  |  +- org.antlr:antlr-runtime:jar:3.2:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-continuation:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-deploy:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-http:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-io:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-jmx:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-security:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-server:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-servlet:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-util:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-webapp:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-xml:jar:8.1.10.v20130312:compile
+[INFO] |  |  |  +- org.eclipse.jetty.orbit:javax.servlet:jar:3.0.0.v201112011016:compile
+[INFO] |  |  |  +- org.ow2.asm:asm:jar:4.1:compile
+[INFO] |  |  |  +- org.ow2.asm:asm-commons:jar:4.1:compile
+[INFO] |  |  |  +- org.restlet.jee:org.restlet:jar:2.1.1:compile
+[INFO] |  |  |  \- org.restlet.jee:org.restlet.ext.servlet:jar:2.1.1:compile
+[INFO] |  |  +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |  |  \- com.vividsolutions:jts:jar:1.13:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-lucene:jar:0.5.4:compile
+[INFO] |  |  +- org.apache.lucene:lucene-core:jar:4.8.1:compile
+[INFO] |  |  +- org.apache.lucene:lucene-analyzers-common:jar:4.8.1:compile
+[INFO] |  |  +- org.apache.lucene:lucene-queryparser:jar:4.8.1:compile
+[INFO] |  |  \- org.apache.lucene:lucene-spatial:jar:4.8.1:compile
+[INFO] |  +- com.thinkaurelius.titan:titan-rexster:jar:0.5.4:compile
+[INFO] |  +- org.codehaus.jackson:jackson-xc:jar:1.9.2:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+[INFO] |  +- com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.2.3:compile
+[INFO] |  |  \- org.json:json:jar:20090211:compile
+[INFO] |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
+[INFO] +- com.thinkaurelius.titan:titan-hadoop-core:zip:example-data:0.5.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-core:jar:2.5.0:compile
+[INFO] |  |  +- org.codehaus.jettison:jettison:jar:1.3.3:compile
+[INFO] |  |  |  \- stax:stax-api:jar:1.0.1:compile
+[INFO] |  |  \- colt:colt:jar:1.2.0:compile
+[INFO] |  |     \- concurrent:concurrent:jar:1.3.4:compile
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-sail-graph:jar:2.5.0:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-api:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-query:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryalgebra-model:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-queryparser-sparql:jar:2.7.10:compile
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryparser-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-memory:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-sail-inferencer:jar:2.7.10:compile
+[INFO] |  |  |  |  \- org.openrdf.sesame:sesame-queryparser-serql:jar:2.7.10:runtime
+[INFO] |  |  |  \- org.openrdf.sesame:sesame-queryalgebra-evaluation:jar:2.7.10:compile
+[INFO] |  |  |     +- org.openrdf.sesame:sesame-repository-sparql:jar:2.7.10:compile
+[INFO] |  |  |     |  \- org.openrdf.sesame:sesame-queryresultio-sparqlxml:jar:2.7.10:compile
+[INFO] |  |  |     \- org.openrdf.sesame:sesame-http-client:jar:2.7.10:compile
+[INFO] |  |  |        +- org.openrdf.sesame:sesame-http-protocol:jar:2.7.10:compile
+[INFO] |  |  |        \- org.openrdf.sesame:sesame-queryresultio-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-sail-nativerdf:jar:2.7.10:compile
+[INFO] |  |  +- net.fortytwo:linked-data-sail:jar:1.1:compile
+[INFO] |  |  |  +- net.fortytwo.ripple:ripple-flow-rdf:jar:1.1:compile
+[INFO] |  |  |  |  \- net.fortytwo.ripple:ripple-flow:jar:1.1:compile
+[INFO] |  |  |  |     \- net.fortytwo.ripple:ripple-base:jar:1.1:compile
+[INFO] |  |  |  |        \- org.restlet.jse:org.restlet:jar:2.1.1:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-rio-binary:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-rio-nquads:jar:2.7.10:compile
+[INFO] |  |  |  +- org.openrdf.sesame:sesame-rio-rdfjson:jar:2.7.10:compile
+[INFO] |  |  |  +- org.semarglproject:semargl-sesame:jar:0.4:compile
+[INFO] |  |  |  |  +- org.semarglproject:semargl-core:jar:0.4:compile
+[INFO] |  |  |  |  \- org.semarglproject:semargl-rdfa:jar:0.4:compile
+[INFO] |  |  |  |     \- org.semarglproject:semargl-rdf:jar:0.4:compile
+[INFO] |  |  |  \- com.github.jsonld-java:jsonld-java-sesame:jar:0.3:compile
+[INFO] |  |  |     \- com.github.jsonld-java:jsonld-java:jar:0.3:compile
+[INFO] |  |  |        \- org.apache.httpcomponents:httpclient-cache:jar:4.2.5:compile
+[INFO] |  |  \- net.fortytwo.sesametools:repository-sail:jar:1.8:compile
+[INFO] |  |     +- net.fortytwo.sesametools:common:jar:1.8:compile
+[INFO] |  |     \- org.openrdf.sesame:sesame-repository-api:jar:2.7.10:compile
+[INFO] |  +- org.elasticsearch:elasticsearch-hadoop-mr:jar:2.0.0:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-n3:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-model:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-api:jar:2.7.10:compile
+[INFO] |  |  +- org.openrdf.sesame:sesame-rio-datatypes:jar:2.7.10:runtime
+[INFO] |  |  \- org.openrdf.sesame:sesame-rio-languages:jar:2.7.10:runtime
+[INFO] |  +- org.openrdf.sesame:sesame-rio-ntriples:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-rdfxml:jar:2.7.10:compile
+[INFO] |  |  \- org.openrdf.sesame:sesame-util:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-trig:jar:2.7.10:compile
+[INFO] |  +- org.openrdf.sesame:sesame-rio-trix:jar:2.7.10:compile
+[INFO] |  \- org.openrdf.sesame:sesame-rio-turtle:jar:2.7.10:compile
+[INFO] +- net.java.dev.jna:jna:jar:3.2.7:compile
+[INFO] +- com.tinkerpop.rexster:rexster-console:jar:2.5.0:compile
+[INFO] |  +- com.tinkerpop.rexster:rexster-core:jar:2.5.0:compile
+[INFO] |  +- com.tinkerpop.rexster:rexster-protocol:jar:2.5.0:compile
+[INFO] |  |  +- org.msgpack:msgpack:jar:0.6.5:compile
+[INFO] |  |  \- org.glassfish.grizzly:grizzly-framework:jar:2.2.16:compile
+[INFO] |  +- com.tinkerpop:pipes:jar:2.5.0:compile
+[INFO] |  \- jline:jline:jar:1.0:compile
+[INFO] +- com.tinkerpop.rexster:rexster-server:jar:2.5.0:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-java:jar:2.5.0:compile
+[INFO] |  +- com.tinkerpop.gremlin:gremlin-groovy:jar:2.5.0:compile
+[INFO] |  |  +- org.apache.ivy:ivy:jar:2.3.0:compile
+[INFO] |  |  +- org.apache.ant:ant:jar:1.8.3:compile
+[INFO] |  |  |  \- org.apache.ant:ant-launcher:jar:1.8.3:compile
+[INFO] |  |  \- org.fusesource.jansi:jansi:jar:1.5:compile
+[INFO] |  +- com.sun.jersey:jersey-grizzly2:jar:1.18.2:compile
+[INFO] |  |  +- org.glassfish.grizzly:grizzly-http:jar:2.2.16:compile
+[INFO] |  |  \- org.glassfish.grizzly:grizzly-http-server:jar:2.2.16:compile
+[INFO] |  +- com.sun.jersey:jersey-json:jar:1.18.2:compile
+[INFO] |  |  \- com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:compile
+[INFO] |  +- com.sun.jersey:jersey-servlet:jar:1.17:compile
+[INFO] |  +- org.glassfish.grizzly:grizzly-http-servlet:jar:2.2.16:compile
+[INFO] |  +- org.glassfish.grizzly:grizzly-core:jar:2.2.16:compile
+[INFO] |  |  +- org.glassfish.grizzly:grizzly-portunif:jar:2.2.16:compile
+[INFO] |  |  \- org.glassfish.grizzly:grizzly-rcm:jar:2.2.16:compile
+[INFO] |  +- org.glassfish.gmbal:gmbal:jar:3.2.0-b003:compile
+[INFO] |  |  +- org.glassfish.external:management-api:jar:3.0.0-b012:compile
+[INFO] |  |  +- org.glassfish.pfl:pfl-basic:jar:1.0.0-b001:compile
+[INFO] |  |  +- org.glassfish.pfl:pfl-tf:jar:1.0.0-b001:compile
+[INFO] |  |  |  \- org.glassfish.pfl:pfl-asm:jar:1.0.0-b001:compile
+[INFO] |  |  +- org.glassfish.pfl:pfl-tf-tools:jar:1.0.0-b001:compile
+[INFO] |  |  \- org.glassfish.pfl:pfl-basic-tools:jar:1.0.0-b001:compile
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-core:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-servlets:jar:3.0.0:compile
+[INFO] |  |  +- com.codahale.metrics:metrics-healthchecks:jar:3.0.0:compile
+[INFO] |  |  +- com.codahale.metrics:metrics-json:jar:3.0.0:compile
+[INFO] |  |  \- com.codahale.metrics:metrics-jvm:jar:3.0.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-jersey:jar:3.0.0:compile
+[INFO] |  |  \- com.codahale.metrics:metrics-annotation:jar:3.0.0:compile
+[INFO] |  +- com.codahale.metrics:metrics-graphite:jar:3.0.1:compile
+[INFO] |  +- com.codahale.metrics:metrics-ganglia:jar:3.0.1:compile
+[INFO] |  |  \- info.ganglia.gmetric4j:gmetric4j:jar:1.0.3:compile
+[INFO] |  |     \- org.acplt:oncrpc:jar:1.0.7:compile
+[INFO] |  \- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |     +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |     |  \- commons-beanutils:commons-beanutils:jar:1.7.0:compile
+[INFO] |     \- commons-beanutils:commons-beanutils-core:jar:1.7.0:compile
+[INFO] +- com.thinkaurelius.titan:titan-test:jar:0.5.4:test
+[INFO] |  +- com.tinkerpop.blueprints:blueprints-test:jar:2.5.0:test
+[INFO] |  +- com.carrotsearch:junit-benchmarks:jar:0.7.0:compile
+[INFO] |  +- com.carrotsearch.randomizedtesting:randomizedtesting-runner:jar:2.0.8:compile
+[INFO] |  +- org.mockito:mockito-all:jar:1.8.5:test
+[INFO] |  \- org.easymock:easymock:jar:3.1:test
+[INFO] |     +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |     \- org.objenesis:objenesis:jar:1.2:test
+[INFO] +- com.thinkaurelius.titan:titan-hbase-core:jar:tests:0.5.4:test
+[INFO] +- com.thinkaurelius.titan:titan-es:jar:tests:0.5.4:test
+[INFO] |  \- org.elasticsearch:elasticsearch:jar:1.2.1:compile
+[INFO] |     +- org.apache.lucene:lucene-codecs:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-queries:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-memory:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-highlighter:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-sandbox:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-suggest:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-misc:jar:4.8.1:compile
+[INFO] |     +- org.apache.lucene:lucene-join:jar:4.8.1:compile
+[INFO] |     \- org.apache.lucene:lucene-grouping:jar:4.8.1:compile
+[INFO] +- com.thinkaurelius.titan:titan-cassandra:jar:tests:0.5.4:test
+[INFO] |  +- org.apache.cassandra:cassandra-all:jar:2.0.8:compile
+[INFO] |  |  +- net.jpountz.lz4:lz4:jar:1.2.0:compile
+[INFO] |  |  +- com.ning:compress-lzf:jar:0.8.4:compile
+[INFO] |  |  +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] |  |  +- com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3:compile
+[INFO] |  |  +- org.antlr:antlr:jar:3.2:compile
+[INFO] |  |  +- com.googlecode.json-simple:json-simple:jar:1.1:compile
+[INFO] |  |  +- org.yaml:snakeyaml:jar:1.11:compile
+[INFO] |  |  +- edu.stanford.ppl:snaptree:jar:0.1:compile
+[INFO] |  |  +- org.mindrot:jbcrypt:jar:0.3m:compile
+[INFO] |  |  +- com.addthis.metrics:reporter-config:jar:2.1.0:compile
+[INFO] |  |  |  \- org.hibernate:hibernate-validator:jar:4.3.0.Final:compile
+[INFO] |  |  |     +- javax.validation:validation-api:jar:1.0.0.GA:compile
+[INFO] |  |  |     \- org.jboss.logging:jboss-logging:jar:3.1.2.GA:compile
+[INFO] |  |  +- com.thinkaurelius.thrift:thrift-server:jar:0.3.3:compile
+[INFO] |  |  +- net.sf.supercsv:super-csv:jar:2.1.0:compile
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:compile
+[INFO] |  |  +- org.apache.cassandra:cassandra-thrift:jar:2.0.8:compile
+[INFO] |  |  \- com.github.stephenc:jamm:jar:0.2.5:compile
+[INFO] |  +- commons-pool:commons-pool:jar:1.6:compile
+[INFO] |  +- org.jboss.netty:netty:jar:3.2.7.Final:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-core:jar:1.56.48:compile
+[INFO] |  |  +- com.eaio.uuid:uuid:jar:3.2:compile
+[INFO] |  |  \- joda-time:joda-time:jar:1.6.2:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-thrift:jar:1.56.48:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-cassandra:jar:1.56.48:compile
+[INFO] |  |  \- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-csv:jar:1.0-r706900_3:compile
+[INFO] |  +- com.netflix.astyanax:astyanax-recipes:jar:1.56.48:compile
+[INFO] |  \- org.xerial.snappy:snappy-java:jar:1.0.5-M3:compile
+[INFO] +- junit:junit:jar:4.11:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.apache.velocity:velocity:jar:1.7:test
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.5:runtime
+[INFO] \- log4j:log4j:jar:1.2.16:runtime
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Titan: Distributed Graph Database .................. SUCCESS [  0.950 s]
+[INFO] Titan-Core: Core Library for Titan ................. SUCCESS [  0.213 s]
+[INFO] Titan-Test: Test Suite for Titan ................... SUCCESS [  0.160 s]
+[INFO] Titan-ElasticSearch: Distributed Indexing Support .. SUCCESS [  0.515 s]
+[INFO] Titan-HBase: Parent Module ......................... SUCCESS [  0.097 s]
+[INFO] Titan-HBase: Version-independent Core .............. SUCCESS [  0.783 s]
+[INFO] Titan-HBase: 1.1.1 Compatibility Shim .............. SUCCESS [  0.542 s]
+[INFO] Titan-HBase: Universal binary ...................... SUCCESS [  0.126 s]
+[INFO] Titan-Hadoop: Parent Module ........................ SUCCESS [  0.297 s]
+[INFO] Titan-Hadoop: Version-independent Core ............. SUCCESS [  0.379 s]
+[INFO] Titan-Hadoop: 2.x Compatibility Shim ............... SUCCESS [  0.270 s]
+[INFO] Titan-Hadoop: Universal binary ..................... SUCCESS [  0.132 s]
+[INFO] Titan-Lucene: Indexing Support ..................... SUCCESS [  0.038 s]
+[INFO] Titan-Rexster: Support for Titan in Rexster ........ SUCCESS [  0.038 s]
+[INFO] Titan-Solr: Distributed Indexing Support ........... SUCCESS [  0.183 s]
+[INFO] Titan-All: Complete Titan Distribution ............. SUCCESS [  0.163 s]
+[INFO] Titan-Dist: Tar and Zip Archives ................... SUCCESS [  0.705 s]
+[INFO] Titan-Dist: Archive with Hadoop 2 .................. SUCCESS [  0.236 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.431 s
+[INFO] Finished at: 2015-08-07T09:21:01-05:00
+[INFO] Final Memory: 44M/908M
+[INFO] ------------------------------------------------------------------------

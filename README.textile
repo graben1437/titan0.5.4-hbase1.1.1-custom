@@ -1,0 +1,16 @@
+Titan 0.5.4 with HBase 1.1.1 support
+
+
+This is a 'one off' version of Titan 0.5.4 that provides support for
+HBase 1.1.1 and Hadoop 2.7.1.
+
+Because of changes in the underlying HBase and Hadoop code in the later versions,
+this build includes minor code changes in the Titan-HBase shim classes to support
+the latest versions of Hadoop and HBase in addition to the expected pom file changes
+for dependencies.
+
+Other than HBase and Hadoop version upgrades, this is the same Titan 0.5.4 that everyone
+knows and loves.  I'll have to check on submitting this as a pull request to Titan 1.0
+once that settles down - assuming the support for the later version of HBase and Hadoop
+are not already supported.
+

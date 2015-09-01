@@ -1,0 +1,219 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.thinkaurelius.titan</groupId>
+        <artifactId>titan</artifactId>
+        <version>0.5.4</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>titan-core</artifactId>
+    <name>Titan-Core: Core Library for Titan</name>
+    <url>http://thinkaurelius.github.com/titan/</url>
+   
+    <properties>
+        <top.level.basedir>${basedir}/..</top.level.basedir>
+    </properties>
+
+    <dependencies>
+        <!-- TinkerPop -->
+        <dependency>
+            <groupId>com.tinkerpop.blueprints</groupId>
+            <artifactId>blueprints-core</artifactId>
+            <version>${tinkerpop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tinkerpop.gremlin</groupId>
+            <artifactId>gremlin-groovy</artifactId>
+            <version>${tinkerpop.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>gossip</artifactId>
+                    <groupId>org.sonatype.gossip</groupId>
+                </exclusion>
+                <!-- Exclude Groovy.  1.8.9 uses unshaded ASM 3.x, which plays badly with Solr's ASM 4.x. -->
+                <exclusion>
+                    <groupId>org.codehaus.groovy</groupId>
+                    <artifactId>groovy</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Depend on a shaded copy of Groovy + ASM with ASM relocated to a hidden package -->
+        <dependency>
+            <groupId>com.thinkaurelius.groovy-shaded-asm</groupId>
+            <artifactId>groovy-shaded-asm</artifactId>
+            <version>1.8.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tinkerpop</groupId>
+            <artifactId>frames</artifactId>
+            <version>${tinkerpop.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.tinkerpop.gremlin</groupId>
+                    <artifactId>gremlin-groovy</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Utility -->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.json</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.codahale.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.codahale.metrics</groupId>
+            <artifactId>metrics-ganglia</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.codahale.metrics</groupId>
+            <artifactId>metrics-graphite</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.spatial4j</groupId>
+            <artifactId>spatial4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>1.3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.carrotsearch</groupId>
+            <artifactId>hppc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.stephenc.high-scale-lib</groupId>
+            <artifactId>high-scale-lib</artifactId>
+            <version>1.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.esotericsoftware.kryo</groupId>
+            <artifactId>kryo</artifactId>
+            <version>2.22</version>
+            <!--<classifier>shaded</classifier>-->
+            
+            <!--
+            http://code.google.com/p/kryo/wiki/MavenShadedJAR
+            
+            Kryo normally depends on classes in these artifacts. The Kryo artifact 
+            with the shaded classifier includes all the classes on which Kryo depends. 
+            The shaded dependency classes also undergo bytecode rewriting to prefix their 
+            normal packagenames with com.esotericsoftware. This appears to be recursive. 
+            For example, kryo depends on reflectasm depends on asm (4.0). The normal 
+            asm packagename is rewritten from
+            org.ow2.asm to com.esotericsoftware.reflectasm.shaded.org.objectweb.asm.
+            
+            Bottom line: these exclusions are harmless, because shaded kyro comes with
+            its own copy of these deps and wouldn't use them anyway.
+            -->
+            <exclusions>
+                <exclusion>
+                    <groupId>com.esotericsoftware.reflectasm</groupId>
+                    <artifactId>reflectasm</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.esotericsoftware.minlog</groupId>
+                    <artifactId>minlog</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.objenesis</groupId>
+                    <artifactId>objenesis</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+    <build>
+        <directory>${basedir}/target</directory>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>${basedir}/src/test/resources
+                </directory>
+            </testResource>
+        </testResources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <!-- Suspend the ASM 3.x ban to allow for shading -->
+                        <id>enforce-asm-ban</id>
+                        <phase>none</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generateStubs</goal>
+                            <goal>compile</goal>
+                            <goal>generateTestStubs</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                        <configuration>
+                            <providerSelection>1.8</providerSelection>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <windowtitle>Titan ${project.version} API</windowtitle>
+                            <doctitle>Titan Graph Database ${project.version} API</doctitle>
+                            <!-- Quiet mode still shows warnings and errors -->
+                            <quiet>true</quiet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
