@@ -74,7 +74,7 @@
         <hbase111.core.version>1.1.1</hbase111.core.version>
         <hbase111.version>${hbase111.core.version}</hbase111.version>
         <jackson1.version>1.9.2</jackson1.version>
-        <jackson2.version>2.2.3</jackson2.version>
+        <jackson2.version>2.10.1</jackson2.version>
         <!-- ES depends on Lucene.  This ES dependency can affect the
              version used by the titan-lucene module.  When updating
              the ES version, also consider the version of Lucene, and
