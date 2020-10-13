@@ -61,7 +61,7 @@
         <titan.compatible.versions>0.5.0,0.5.1,0.5.2,0.5.3</titan.compatible.versions>
         <tinkerpop.version>2.5.0</tinkerpop.version>
         <groovy.version>2.3.7</groovy.version>
-        <junit.version>4.11</junit.version>
+        <junit.version>4.13.1</junit.version>
         <mrunit.version>1.1.0</mrunit.version>
         <cassandra.version>2.0.8</cassandra.version>
         <metrics2.version>2.1.2</metrics2.version>
@@ -666,7 +666,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.11</version>
+                <version>4.13.1</version>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
