@@ -68,7 +68,7 @@
         <metrics3.version>3.0.1</metrics3.version>
         <sesame.version>2.7.10</sesame.version>
         <slf4j.version>1.7.5</slf4j.version>
-        <httpcomponents.version>4.2.5</httpcomponents.version>
+        <httpcomponents.version>4.5.13</httpcomponents.version>
         <hadoop2.version>2.5.1</hadoop2.version>
         <hadoop2.client.version>2.5.1</hadoop2.client.version>
         <hbase111.core.version>1.1.1</hbase111.core.version>
